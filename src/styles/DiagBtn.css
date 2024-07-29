@@ -1,0 +1,72 @@
+/* Group 1000003569 */
+.group {
+  position: relative; /* absolute에서 relative로 변경 */
+  width: 676px;
+  height: 66px;
+  left: 1024px;
+  top: -150px;
+  display: flex;
+  align-items: center;
+  margin: 102px 0; /* 위아래 간격 추가 */
+}
+
+/* Rectangle 7129 */
+.rectangle-outer {
+  box-sizing: border-box;
+  position: relative;
+  width: 410px;
+  height: 66px;
+  border: 3px solid #4d4160;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Rectangle 7125 */
+.rectangle-inner {
+  position: absolute;
+  width: 342px;
+  height: 66px;
+  background: #4d4160;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 350px; /* rectangle-outer의 오른쪽과 겹치도록 조정 */
+  z-index: 2;
+}
+
+/* Text styles */
+.simple-diagnosis {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  color: #ffffff;
+  margin: 0;
+  padding-left: 60px; /* 텍스트 위치 조정 */
+}
+
+.key-weight {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  color: #4d4160;
+  margin: 0;
+  margin-left: 10px; /* 간격 조정 */
+}
+
+/* Arrow 1 */
+.arrow {
+  box-sizing: border-box;
+  width: 29px;
+  height: 29px;
+  border: none;
+  color: #ffffff;
+  margin-left: 40px;
+}

@@ -1,0 +1,173 @@
+/* image 3 */
+.background_img {
+  box-sizing: border-box;
+  position: absolute;
+  width: 1920px;
+  height: 1382px;
+  top: 205px;
+  background: linear-gradient(0deg, rgba(185, 179, 255, 0.1), rgba(185, 179, 255, 0.1));
+  border: 1px solid #000000;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Group 1000003567 */
+.textBox1 {
+  position: relative;
+  width: 450px;
+  height: 144px;
+  top: 926px;
+  right: 882px;
+  bottom: 370px;
+  left: 376px;
+}
+
+/* AI 기반 맞춤형 의류 추천 서비스 */
+.text1 {
+  position: relative;
+  width: 360px;
+  height: 144px;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 80px;
+  /* or 148% */
+  text-align: left;
+  color: #000000;
+}
+
+/* Group 1000003568 */
+.textBox2 {
+  position: relative;
+  width: 440px;
+  top: 220px;
+  right: 780px;
+  bottom: 691px;
+  left: 376px;
+}
+
+/* A 아름답고 */
+.text2_1 {
+  position: relative;
+  width: 390px;
+  height: 68px;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 68px;
+  color: #000000;
+}
+
+/* Z 자연스러운 */
+.text2_2 {
+  position: relative;
+  width: 390px;
+  height: 68px;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 68px;
+  color: #000000;
+  padding-left: 20px; /* 패딩 추가 */
+}
+
+/* A 아웃핏 */
+.text2_3 {
+  position: relative;
+  width: 390px;
+  height: 68px;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 68px;
+  color: #000000;
+  padding-left: 40px; /* 패딩 추가 */
+}
+
+/* 간단 진단하기 버튼 */
+.simple_box {
+  margin-top: 30px; /* 위쪽 간격 */
+  margin-bottom: 30px; /* 아래쪽 간격 */
+}
+
+/* 정밀 진단하기 버튼 */
+.more_box {
+  margin-bottom: 30px; /* 아래쪽 간격 */
+}
+
+/* Group 1000003571 */
+.problem_box1,
+.problem_box2,
+.problem_box3 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+/* Ellipse styles */
+.problem_box1_round,
+.problem_box2_round,
+.problem_box3_round {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: rgba(214, 212, 240, 0.9);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Text styles for problem boxes */
+.problem_box1_text,
+.problem_box2_text,
+.problem_box3_text {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+
+/* Arrow 4 */
+.solve_arrow {
+  box-sizing: border-box;
+  position: relative;
+  width: 79px;
+  height: 0px;
+  border: 7px solid #4d4160;
+  transform: rotate(90deg);
+}
+
+/* 쉬운 신체 사이즈 측정 및 해외 의류 추천 */
+.solve_text {
+  position: relative;
+  width: 552px;
+  height: 64px;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 35px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+
+/* Rectangle 7126 */
+.solve_box {
+  position: relative;
+  width: 676px;
+  height: 79px;
+  background: rgba(214, 212, 240, 0.9);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+}
