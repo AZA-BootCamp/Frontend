@@ -1,0 +1,206 @@
+/* 간단 진단하기 */
+.group {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+
+  background: #ffffff;
+}
+
+/* Group 1000003590 */
+.content {
+  position: absolute;
+  width: 1920px;
+  height: 1018px;
+  left: 0px;
+  top: 207px;
+}
+/* Group 1000003589 */
+.group_1 {
+  position: absolute;
+  width: 1920px;
+  height: 1018px;
+  left: 0px;
+  top: 207px;
+}
+/* Group 1000003588 */
+.group_2 {
+  position: absolute;
+  width: 1920px;
+  height: 1018px;
+  left: 0px;
+  top: 207px;
+}
+/* Group 1000003587 */
+.group_3 {
+  position: absolute;
+  width: 1920px;
+  height: 1018px;
+  left: 0px;
+  top: 207px;
+}
+
+/* Rectangle 7141 */
+.group_4 {
+  position: absolute;
+  width: 1920px;
+  height: 911px;
+  left: 0px;
+  top: 207px;
+
+  background: rgba(217, 217, 217, 0.5);
+}
+/* AdobeStock_421336364 1 */
+.group_5 {
+  position: absolute;
+  width: 1920px;
+  height: 889.69px;
+  left: 0px;
+  top: 207px;
+}
+/* Line 2 */
+.line {
+  position: absolute;
+  width: 1920px;
+  height: 0px;
+  left: 0px;
+  top: 206.98px;
+
+  border: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Group 1000003585 */
+.title {
+  position: absolute;
+  width: 220px;
+  height: 117px;
+  left: 318px;
+  top: 277px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+/* Rectangle 7138 */
+.title_box {
+  position: absolute;
+  width: 220px;
+  height: 77.45px;
+  left: 318px;
+  top: 290.18px;
+
+  background: #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+}
+/* 간단 진단 */
+.title_text {
+  position: absolute;
+  width: 220px;
+  height: 117px;
+  left: 318px;
+  top: 277px;
+
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 24px;
+  /* or 60% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+/* 기본 정보 입력 */
+.detail {
+  position: absolute;
+  width: 170px;
+  height: 39px;
+  left: 538px;
+  top: 316px;
+
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  /* or 100% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+/* Group 1000003586 */
+.next_btn {
+  position: absolute;
+  width: 79px;
+  height: 47px;
+  left: 1563px;
+  top: 875px;
+}
+/* Rectangle 7138 */
+.next_box {
+  position: absolute;
+  width: 79px;
+  height: 47px;
+  left: 1563px;
+  top: 875px;
+
+  background: #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+/* Group 1000003581 */
+.next_arrow_box {
+  position: absolute;
+  width: 30px;
+  height: 0px;
+  left: 1585px;
+  top: 899px;
+}
+/* Arrow 5 */
+.next_arrow {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 30px;
+  height: 0px;
+  left: 1585px;
+  top: 899px;
+
+  border: 2px solid #ffffff;
+}
+/* Group 1000003598 */
+.search_box {
+  position: absolute;
+  width: 24px;
+  height: 28px;
+  left: 1159px;
+  top: 752px;
+}
+
+/* Line 4 */
+.search_arrow {
+  position: absolute;
+  width: 14.14px;
+  height: 0px;
+  left: 1173px;
+  top: 770px;
+
+  border: 3px solid #000000;
+  transform: rotate(45deg);
+}
+
+/* Rectangle 7140 */
+.group_6 {
+  position: absolute;
+  width: 1920px;
+  height: 911px;
+  left: 0px;
+  top: 207px;
+
+  background: #ffffff;
+}

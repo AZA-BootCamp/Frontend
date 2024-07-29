@@ -1,0 +1,99 @@
+/* Group 1000003582 */
+
+position: absolute;
+width: 505px;
+height: 53px;
+left: 708px;
+top: 402px;
+
+/* Group 1000003578 */
+
+position: absolute;
+width: 505px;
+height: 53px;
+left: 708px;
+top: 402px;
+
+/* Rectangle 7124 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 440px;
+height: 50px;
+left: calc(50% - 440px / 2 + 33px);
+top: calc(50% - 50px / 2 - 113px);
+
+background: #ffffff;
+border: 3px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 40px;
+
+/* Rectangle 7125 */
+
+position: absolute;
+width: 139px;
+height: 50px;
+left: calc(50% - 139px / 2 - 182.5px);
+top: calc(50% - 50px / 2 - 113px);
+
+background: #000000;
+border-radius: 40px;
+
+/* 성별 */
+
+position: absolute;
+width: 108.22px;
+height: 25.32px;
+left: calc(50% - 108.22px / 2 - 182.89px);
+top: calc(50% - 25.32px / 2 - 110.34px);
+
+font-family: 'Source Serif Pro';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 24px;
+/* or 75% */
+text-align: center;
+
+color: #ffffff;
+
+/* 여성 */
+
+position: absolute;
+width: 127px;
+height: 50px;
+left: calc(50% - 127px / 2 + 147.5px);
+top: calc(50% - 50px / 2 - 110px);
+
+font-family: 'Source Serif Pro';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 24px;
+/* or 75% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+/* 남성 */
+
+position: absolute;
+width: 127px;
+height: 50px;
+left: calc(50% - 127px / 2 - 14.5px);
+top: calc(50% - 50px / 2 - 111px);
+
+font-family: 'Source Serif Pro';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 24px;
+/* or 75% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
