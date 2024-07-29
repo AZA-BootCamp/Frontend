@@ -52,7 +52,7 @@ const Main = () => {
       </div>
       <div className="buttons-container fade-element">
         <DiagBtn text1="간단 진단하기" text2="키, 몸무게만으로" navigateTo="/diagSimple" />
-        <DiagBtn text1="정밀 진단하기" text2="사진으로" navigateTo="/" />
+        <DiagBtn text1="정밀 진단하기" text2="사진으로" navigateTo="/diagMore" />
       </div>
       <div className="fade-element">
         <AZA
