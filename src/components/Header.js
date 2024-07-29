@@ -1,8 +1,8 @@
+// Header.js
 import React from 'react';
 import '../styles/Header.css';
 import AZA from './AZA';
 import Menu from './Menu';
-import { BiFontSize } from 'react-icons/bi';
 
 const Header = () => {
   return (
@@ -12,7 +12,7 @@ const Header = () => {
         style1={{ width: '137px', height: '57px', borderRadius: '120%' }}
         style2={{ fontSize: '32px', lineHeight: '40px' }}
       />
-      <Menu />
+      <Menu showLogin={true} />
     </header>
   );
 };
