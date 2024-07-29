@@ -1,0 +1,108 @@
+/* Frame 4 */
+.menu_box {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 150px;
+
+  position: absolute;
+  width: 901px;
+  height: 24px;
+  left: calc(50% - 901px / 2 + 231.5px);
+  top: 95px;
+}
+
+/* About AZA */
+.About_AZA {
+  width: 139px;
+  height: 24px;
+
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+
+  color: #000000;
+  border-color: white;
+  border-width: 0px;
+  background-color: white;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Chatting Bot */
+.Chatting_Bot {
+  width: 180px;
+  height: 24px;
+
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+
+  color: #000000;
+  border-color: white;
+  border-width: 0px;
+  background-color: white;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* More */
+.More {
+  width: 76px;
+  height: 24px;
+
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+
+  color: #000000;
+  border-color: white;
+  border-width: 0px;
+  background-color: white;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+
+/* Login */
+.Login {
+  width: 76px;
+  height: 24px;
+
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+
+  color: #000000;
+  border-color: white;
+  border-width: 0px;
+  background-color: white;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+}

@@ -1,0 +1,25 @@
+/* Group 1000003556 */
+.logo_box {
+  z-index: 10;
+}
+
+/* Ellipse 6 */
+.logo_round {
+  position: relative;
+  background: #000000;
+  display: flex; /* 중앙 정렬을 위한 flexbox 사용 */
+  align-items: center; /* 수직 중앙 정렬 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  z-index: 11;
+}
+
+/* AZA */
+.logo_text {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 12;
+}
