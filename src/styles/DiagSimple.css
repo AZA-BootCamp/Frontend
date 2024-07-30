@@ -1,0 +1,185 @@
+/* 애니메이션 정의 */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* 아래에서 위로 올라오는 효과 */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 요소가 보이기 시작할 때 적용할 클래스 */
+.fade-in {
+  animation: fadeIn 1s ease-out forwards; /* 애니메이션이 한 번만 실행되도록 설정 */
+  opacity: 0; /* 처음에는 보이지 않도록 설정 */
+}
+
+/* 간단 진단하기 */
+.diagsimple-group {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  top: 207px;
+  background: #ffffff;
+}
+
+/* Group 1000003590 */
+.content {
+  position: absolute;
+  width: 1920px;
+  height: 1018px;
+  left: 0px;
+  /*top: 207px;*/
+}
+
+/* Group 1000003589 */
+.diagsimple-group_1 {
+  position: absolute;
+  width: 1920px;
+  height: 1018px;
+  left: 0px;
+  /*top: 207px;*/
+  z-index: 0; /* diagsimple-group-5 뒤에 위치하도록 설정 */
+}
+
+/* Group 1000003588 */
+.diagsimple-group_2 {
+  position: absolute;
+  width: 1920px;
+  height: 1018px;
+  left: 0px;
+  /*top: 207px;*/
+}
+
+/* Group 1000003587 */
+.diagsimple-group_3 {
+  position: absolute;
+  width: 1920px;
+  height: 1018px;
+  left: 0px;
+  top: 207px;
+}
+
+/* Rectangle 7141 */
+.diagsimple-group_4 {
+  position: absolute;
+  width: 1920px;
+  height: 911px;
+  left: 0px;
+  top: 207px;
+  background: rgba(217, 217, 217, 0.5);
+}
+
+/* AdobeStock_421336364 1 */
+.diagsimple-group_5 {
+  position: absolute;
+  width: 1920px;
+  height: 911px;
+  left: 0px;
+  /*top: 207px;*/
+  z-index: 1; /* diagsimple-group_1 앞에 위치하도록 설정 */
+}
+
+/* Line 2 */
+.line {
+  position: absolute;
+  width: 1920px;
+  height: 0px;
+  left: 0px;
+  /*top: 206.98px;*/
+  border: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Group 1000003585 */
+.diagsimple-title {
+  position: absolute;
+  width: 220px;
+  height: 117px;
+  left: 318px;
+  top: 277px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  z-index: 4;
+}
+
+/* Rectangle 7138 */
+.diagsimple-title_box {
+  position: absolute;
+  width: 220px;
+  height: 77.45px;
+  left: -25px;
+  top: -180px;
+  background: #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+}
+
+/* 간단 진단 */
+.diagsimple-title_text {
+  position: absolute;
+  width: 220px;
+  height: 117px;
+  left: 14px;
+  top: -200px;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  margin: 0px 0px 0px 0px;
+  z-index: 6;
+}
+
+/* 기본 정보 입력 */
+.diagsimple-detail {
+  position: relative;
+  width: 170px;
+  height: 39px;
+  left: 538px;
+  top: 130px;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Group 1000003598 */
+.search_box {
+  position: relative;
+  width: 24px;
+  height: 28px;
+  left: 1159px;
+  top: 752px;
+}
+
+/* Line 4 */
+.search_arrow {
+  position: relative;
+  width: 14.14px;
+  height: 0px;
+  left: 1173px;
+  top: 770px;
+  border: 3px solid #000000;
+  transform: rotate(45deg);
+}
+
+/* Rectangle 7140 */
+.diagsimple-group_6 {
+  position: relative;
+  width: 1920px;
+  height: 911px;
+  left: 0px;
+  /*top: 207px;*/
+  background: #ffffff;
+}
