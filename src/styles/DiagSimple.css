@@ -1,9 +1,27 @@
+/* 애니메이션 정의 */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* 아래에서 위로 올라오는 효과 */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 요소가 보이기 시작할 때 적용할 클래스 */
+.fade-in {
+  animation: fadeIn 1s ease-out forwards; /* 애니메이션이 한 번만 실행되도록 설정 */
+  opacity: 0; /* 처음에는 보이지 않도록 설정 */
+}
+
 /* 간단 진단하기 */
-.group {
+.diagsimple-group {
   position: relative;
   width: 1920px;
   height: 1080px;
-
+  top: 207px;
   background: #ffffff;
 }
 
@@ -13,26 +31,30 @@
   width: 1920px;
   height: 1018px;
   left: 0px;
-  top: 207px;
+  /*top: 207px;*/
 }
+
 /* Group 1000003589 */
-.group_1 {
+.diagsimple-group_1 {
   position: absolute;
   width: 1920px;
   height: 1018px;
   left: 0px;
-  top: 207px;
+  /*top: 207px;*/
+  z-index: 0; /* diagsimple-group-5 뒤에 위치하도록 설정 */
 }
+
 /* Group 1000003588 */
-.group_2 {
+.diagsimple-group_2 {
   position: absolute;
   width: 1920px;
   height: 1018px;
   left: 0px;
-  top: 207px;
+  /*top: 207px;*/
 }
+
 /* Group 1000003587 */
-.group_3 {
+.diagsimple-group_3 {
   position: absolute;
   width: 1920px;
   height: 1018px;
@@ -41,141 +63,100 @@
 }
 
 /* Rectangle 7141 */
-.group_4 {
+.diagsimple-group_4 {
   position: absolute;
   width: 1920px;
   height: 911px;
   left: 0px;
   top: 207px;
-
   background: rgba(217, 217, 217, 0.5);
 }
+
 /* AdobeStock_421336364 1 */
-.group_5 {
+.diagsimple-group_5 {
   position: absolute;
   width: 1920px;
-  height: 889.69px;
+  height: 911px;
   left: 0px;
-  top: 207px;
+  /*top: 207px;*/
+  z-index: 1; /* diagsimple-group_1 앞에 위치하도록 설정 */
 }
+
 /* Line 2 */
 .line {
   position: absolute;
   width: 1920px;
   height: 0px;
   left: 0px;
-  top: 206.98px;
-
+  /*top: 206.98px;*/
   border: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 /* Group 1000003585 */
-.title {
+.diagsimple-title {
   position: absolute;
   width: 220px;
   height: 117px;
   left: 318px;
   top: 277px;
-
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  z-index: 4;
 }
+
 /* Rectangle 7138 */
-.title_box {
+.diagsimple-title_box {
   position: absolute;
   width: 220px;
   height: 77.45px;
-  left: 318px;
-  top: 290.18px;
-
+  left: -25px;
+  top: -180px;
   background: #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 40px;
 }
+
 /* 간단 진단 */
-.title_text {
+.diagsimple-title_text {
   position: absolute;
   width: 220px;
   height: 117px;
-  left: 318px;
-  top: 277px;
-
-  font-family: 'Source Serif Pro';
+  left: 14px;
+  top: -200px;
+  font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
   line-height: 24px;
-  /* or 60% */
   display: flex;
   align-items: center;
   text-align: center;
-
   color: #ffffff;
+  margin: 0px 0px 0px 0px;
+  z-index: 6;
 }
+
 /* 기본 정보 입력 */
-.detail {
-  position: absolute;
+.diagsimple-detail {
+  position: relative;
   width: 170px;
   height: 39px;
   left: 538px;
-  top: 316px;
-
-  font-family: 'Source Serif Pro';
+  top: 130px;
+  font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
-  /* or 100% */
   display: flex;
   align-items: center;
   text-align: center;
-
   color: #000000;
-
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-/* Group 1000003586 */
-.next_btn {
-  position: absolute;
-  width: 79px;
-  height: 47px;
-  left: 1563px;
-  top: 875px;
-}
-/* Rectangle 7138 */
-.next_box {
-  position: absolute;
-  width: 79px;
-  height: 47px;
-  left: 1563px;
-  top: 875px;
 
-  background: #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 30px;
-}
-/* Group 1000003581 */
-.next_arrow_box {
-  position: absolute;
-  width: 30px;
-  height: 0px;
-  left: 1585px;
-  top: 899px;
-}
-/* Arrow 5 */
-.next_arrow {
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 30px;
-  height: 0px;
-  left: 1585px;
-  top: 899px;
-
-  border: 2px solid #ffffff;
-}
 /* Group 1000003598 */
 .search_box {
-  position: absolute;
+  position: relative;
   width: 24px;
   height: 28px;
   left: 1159px;
@@ -184,23 +165,21 @@
 
 /* Line 4 */
 .search_arrow {
-  position: absolute;
+  position: relative;
   width: 14.14px;
   height: 0px;
   left: 1173px;
   top: 770px;
-
   border: 3px solid #000000;
   transform: rotate(45deg);
 }
 
 /* Rectangle 7140 */
-.group_6 {
-  position: absolute;
+.diagsimple-group_6 {
+  position: relative;
   width: 1920px;
   height: 911px;
   left: 0px;
-  top: 207px;
-
+  /*top: 207px;*/
   background: #ffffff;
 }

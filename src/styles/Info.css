@@ -1,99 +1,152 @@
+/* Info 컨테이너 */
+.info-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Info 컴포넌트 사이 간격 */
+  margin-top: 20px; /* 컨테이너와 상단 요소 사이 간격 */
+  top: 340px;
+  right: 707px;
+  bottom: 289px;
+  left: 712px;
+}
+
 /* Group 1000003582 */
-
-position: absolute;
-width: 505px;
-height: 53px;
-left: 708px;
-top: 402px;
-
+.info-group {
+  position: relative;
+  width: 505px;
+  height: 53px;
+  margin: 20px 0; /* 위아래 간격 추가 */
+}
 /* Group 1000003578 */
-
-position: absolute;
-width: 505px;
-height: 53px;
-left: 708px;
-top: 402px;
-
+.info-group1 {
+  position: relative;
+  width: 505px;
+  height: 53px;
+  /*left: 708px;*/
+  /*top: 402px;*/
+}
 /* Rectangle 7124 */
+.info-rectangle-inner {
+  box-sizing: border-box;
 
-box-sizing: border-box;
+  position: absolute;
+  width: 440px;
+  height: 50px;
+  left: calc(50% - 440px / 2 + 33px);
+  top: calc(50% - 50px / 2 - 113px);
 
-position: absolute;
-width: 440px;
-height: 50px;
-left: calc(50% - 440px / 2 + 33px);
-top: calc(50% - 50px / 2 - 113px);
-
-background: #ffffff;
-border: 3px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 40px;
-
+  background: #ffffff;
+  border: 3px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  z-index: 1;
+  pointer-events: auto;
+}
 /* Rectangle 7125 */
+.info-rectangle-outer {
+  position: absolute;
+  width: 139px;
+  height: 50px;
+  left: calc(50% - 139px / 2 - 182.5px);
+  top: calc(50% - 50px / 2 - 113px);
 
-position: absolute;
-width: 139px;
-height: 50px;
-left: calc(50% - 139px / 2 - 182.5px);
-top: calc(50% - 50px / 2 - 113px);
+  background: #000000;
+  border-radius: 40px;
+  z-index: 2;
+}
+/* 성별 */
+.category {
+  position: absolute;
+  width: 108.22px;
+  height: 25.32px;
+  left: 16px;
+  top: -130px;
 
-background: #000000;
-border-radius: 40px;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 24px;
+  /* or 75% */
+  text-align: center;
+
+  color: #ffffff;
+  z-index: 6;
+}
+
+/* 성별 선택 버튼을 가로로 정렬 */
+.info-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 
 /* 성별 */
+.info-button {
+  position: relative;
+  width: 127px;
+  height: 50px;
+  left: 30px;
+  top: 0px;
 
-position: absolute;
-width: 108.22px;
-height: 25.32px;
-left: calc(50% - 108.22px / 2 - 182.89px);
-top: calc(50% - 25.32px / 2 - 110.34px);
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 24px;
+  /* or 75% */
 
-font-family: 'Source Serif Pro';
-font-style: normal;
-font-weight: 400;
-font-size: 32px;
-line-height: 24px;
-/* or 75% */
-text-align: center;
+  color: #000000;
+  border: none;
+  background-color: transparent;
+  padding: 0px 10px;
+}
 
-color: #ffffff;
+.info-button:hover {
+  background: #000000;
+  border-radius: 40px;
+  color: #ffffff;
+}
 
-/* 여성 */
+.info-units {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 50px;
+}
 
-position: absolute;
-width: 127px;
-height: 50px;
-left: calc(50% - 127px / 2 + 147.5px);
-top: calc(50% - 50px / 2 - 110px);
+.info-input {
+  width: 150px;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 24px;
+  border: none;
+  background: transparent;
+  text-align: center;
+  z-index: 3; /* 입력 필드를 클릭 가능하도록 설정 */
+  pointer-events: auto; /* 클릭 가능하도록 설정 */
+}
 
-font-family: 'Source Serif Pro';
-font-style: normal;
-font-weight: 400;
-font-size: 32px;
-line-height: 24px;
-/* or 75% */
-display: flex;
-align-items: center;
-text-align: center;
+.info-unit {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 24px;
+  color: #000000;
+  margin-top: 10px;
+}
 
-color: #000000;
-
-/* 남성 */
-
-position: absolute;
-width: 127px;
-height: 50px;
-left: calc(50% - 127px / 2 - 14.5px);
-top: calc(50% - 50px / 2 - 111px);
-
-font-family: 'Source Serif Pro';
-font-style: normal;
-font-weight: 400;
-font-size: 32px;
-line-height: 24px;
-/* or 75% */
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #000000;
+.info-icon {
+  width: 20px;
+  height: 20px;
+  left: 1159px;
+  top: 752px;
+  color: #000000;
+  cursor: pointer;
+  margin: 12px;
+}
