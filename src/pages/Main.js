@@ -56,7 +56,7 @@ const Main = () => {
       </div>
       <div className="fade-element">
         <AZA
-          style={{ position: 'absolute', width: '411px', height: '150px', left: '386px', top: '181px' }}
+          style={{ position: 'absolute', width: '411px', height: '150px', left: '386px', top: '60px' }}
           style1={{ width: '300px', height: '150px', borderRadius: '70%' }}
           style2={{ fontSize: '64px', lineHeight: '80px' }}
         />

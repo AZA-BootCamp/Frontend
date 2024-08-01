@@ -40,7 +40,7 @@ const DiagSimple = () => {
         <div className="diagsimple-group_1">
           <div className="diagsmple-group_4"></div>
           <div className="diagsimple-group_2">
-            <div className="group_3">
+            <div className="diagsimple-group_3">
               <img src={image_people} alt="People" className="diagsimple-group_6" />
             </div>
           </div>
