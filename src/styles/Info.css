@@ -6,7 +6,7 @@
   align-items: center;
   gap: 20px; /* Info 컴포넌트 사이 간격 */
   margin-top: 20px; /* 컨테이너와 상단 요소 사이 간격 */
-  top: 340px;
+  top: 320px;
   right: 707px;
   bottom: 289px;
   left: 712px;
@@ -59,9 +59,9 @@
 /* 성별 */
 .category {
   position: absolute;
-  width: 108.22px;
+  width: 188.22px;
   height: 25.32px;
-  left: 16px;
+  left: -23px;
   top: -130px;
 
   font-family: 'Merriweather';

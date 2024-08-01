@@ -184,3 +184,63 @@
   top: 0px;
   background: #ffffff;
 }
+
+/* Rectangle 7142 */
+.show_body {
+  position: absolute;
+  width: 296px;
+  height: 409px;
+  left: 1333px;
+  top: 182px;
+
+  background: #ffffff;
+}
+
+/* Group 1000003586 */
+.goto-home {
+  position: absolute;
+  width: 377px;
+  height: 47px;
+  left: 1265px;
+  top: 675px;
+}
+
+/* Rectangle 7138 */
+.goto-home_box {
+  position: absolute;
+  width: 377px;
+  height: 47px;
+  left: 1265px;
+  top: 875px;
+
+  background: #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+/* Group 1000003581 */
+.goto-home_arrow_box {
+  position: absolute;
+  width: 29.94px;
+  height: 0px;
+  left: 1585.1px;
+  top: 899px;
+}
+/* Arrow 5 */
+.goto-home_arrow {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 29.94px;
+  height: 0px;
+  left: 1585.1px;
+  top: 899px;
+
+  border: 2px solid #ffffff;
+}
+.home_icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 1439px;
+  top: 884px;
+}

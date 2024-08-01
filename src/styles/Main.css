@@ -42,8 +42,8 @@
   box-sizing: border-box;
   position: absolute;
   width: 1920px;
-  height: 1382px;
-  top: 205px;
+  height: 1682px;
+  top: 135px;
   background: linear-gradient(0deg, rgba(185, 179, 255, 0.1), rgba(185, 179, 255, 0.1));
   /*border: 1px solid #000000;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);*/
@@ -54,7 +54,7 @@
   position: relative;
   width: 450px;
   height: 144px;
-  top: 926px;
+  top: 1026px;
   right: 882px;
   bottom: 370px;
   left: 376px;
@@ -79,7 +79,7 @@
 .textBox2 {
   position: relative;
   width: 440px;
-  top: 220px;
+  top: 110px;
   right: 780px;
   bottom: 691px;
   left: 376px;
@@ -176,4 +176,17 @@
   background: rgba(214, 212, 240, 0.9);
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
+}
+
+/* Group 1000003571 */
+.problem-container {
+  position: absolute;
+  width: 676px;
+  height: 200px;
+  top: 1017px;
+  left: 996px;
+  display: flex;
+  justify-content: space-around; /* 또는 space-between, 필요에 따라 조정 */
+  align-items: center;
+  margin: 20px 0; /* 필요에 따라 조정 */
 }

@@ -6,13 +6,13 @@
   justify-content: flex-end;
   align-items: flex-start;
   padding: 0px;
-  gap: 150px;
+  gap: 100px;
 
   position: absolute;
   width: 901px;
   height: 24px;
   left: calc(50% - 901px / 2 + 231.5px);
-  top: 95px;
+  top: 33px;
 }
 
 /* About AZA */
