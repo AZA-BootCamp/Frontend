@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
 import '../styles/Info.css';
+import Modal from './Modal';
 
 const Info = ({ text1, style, style2, style3, style4, navigateTo }) => {
   const navigate = useNavigate();
+  const [modalOpen, setModalOpen] = useState(false);
+  const options = ['Brand 1', 'Brand 2', 'Brand 3']; // 예시 옵션 배열
 
   const handleClick = () => {
     navigate(navigateTo);
@@ -37,7 +40,7 @@ const Info = ({ text1, style, style2, style3, style4, navigateTo }) => {
         return (
           <div className="info-units">
             <input type="text" className="info-input" placeholder="Brand" />
-            <FaSearch className="info-icon" />
+            <FaSearch className="info-icon" onClick={() => setModalOpen(true)} />
           </div>
         );
       default:
@@ -62,6 +65,7 @@ const Info = ({ text1, style, style2, style3, style4, navigateTo }) => {
           {renderContent()}
         </div>
       </div>
+      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} options={options} />
     </div>
   );
 };

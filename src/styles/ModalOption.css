@@ -1,0 +1,40 @@
+/* Group 1000003605 */
+.option-container {
+  position: absolute;
+  top: 88px;
+  display: flex;
+  flex-direction: column; /* 가로로 정렬 */
+  gap: 0px; /* 요소 간 간격 추가 */
+}
+
+.option {
+  width: 370px;
+  height: 45px;
+  padding-top: 5px;
+  z-index: 6;
+}
+
+.option:hover {
+  background: #000000;
+  color: #ffffff;
+  padding-left: 20px;
+}
+
+.option_box {
+  width: 370px;
+  height: 45px;
+}
+
+.option_text {
+  width: 346px;
+  height: 45px;
+  margin: 0px;
+  padding-left: 15px;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
