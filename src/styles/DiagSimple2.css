@@ -201,8 +201,8 @@
   position: absolute;
   width: 377px;
   height: 47px;
-  left: 1265px;
-  top: 675px;
+  left: 1295px;
+  top: 625px;
 }
 
 /* Rectangle 7138 */
@@ -210,20 +210,21 @@
   position: absolute;
   width: 377px;
   height: 47px;
-  left: 1265px;
-  top: 875px;
+  left: 0px;
+  top: 0px;
 
   background: #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
+  cursor: pointer;
 }
 /* Group 1000003581 */
 .goto-home_arrow_box {
   position: absolute;
   width: 29.94px;
-  height: 0px;
-  left: 1585.1px;
-  top: 899px;
+  height: 29.94px;
+  left: 0px;
+  top: 0px;
 }
 /* Arrow 5 */
 .goto-home_arrow {
@@ -241,6 +242,72 @@
   position: absolute;
   width: 30px;
   height: 30px;
-  left: 1439px;
-  top: 884px;
+  left: 180px;
+  top: 7px;
+  color: #ffffff;
+}
+
+/* Group 1000003593 */
+.goto-diagMore {
+  position: absolute;
+  width: 377px;
+  height: 47px;
+  left: 1295px;
+  top: 710px;
+}
+
+/* Rectangle 7138 */
+.goto-diagMore_box {
+  position: absolute;
+  width: 377px;
+  height: 47px;
+  left: 0px;
+  top: 0px;
+
+  background: #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* 정밀 진단하러 가기 */
+.goto-diagMore_text {
+  position: absolute;
+  width: 282.75px;
+  height: 24px;
+  left: 59px;
+  top: -20px;
+
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 24px;
+  /* identical to box height, or 75% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+/* Arrow 5 */
+.goto-diagMore_arrow {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 29.94px;
+  height: 29.94px;
+  left: 0px;
+  top: -1px;
+
+  color: #ffffff;
+}
+
+/* Group 1000003581 */
+.goto-diagMore_arrow_box {
+  position: absolute;
+  width: 324.04px;
+  height: 24px;
+  left: 320px;
+  top: 8px;
 }

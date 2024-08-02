@@ -36,6 +36,7 @@
   justify-content: center;
   left: 350px; /* rectangle-outer의 오른쪽과 겹치도록 조정 */
   z-index: 2;
+  cursor: pointer;
 }
 
 /* Text styles */

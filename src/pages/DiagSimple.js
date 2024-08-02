@@ -58,7 +58,15 @@ const DiagSimple = () => {
         <div className="diagsimple-title_box"></div>
       </div>
       <p className="diagsimple-detail">기본 정보 입력</p>
-      <NextBtn style1={{ width: '75px', height: '47px', left: '1563px', top: '775px' }} navigateTo="/diagSimple2" />
+      <NextBtn
+        style1={{
+          width: '75px',
+          height: '47px',
+          left: '1563px',
+          top: '695px',
+        }}
+        navigateTo="/diagSimple2"
+      />
     </div>
   );
 };

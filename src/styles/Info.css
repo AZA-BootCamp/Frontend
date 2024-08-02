@@ -71,6 +71,7 @@
   line-height: 24px;
   /* or 75% */
   text-align: center;
+  align-items: center;
 
   color: #ffffff;
   z-index: 6;
@@ -102,6 +103,7 @@
   border: none;
   background-color: transparent;
   padding: 0px 10px;
+  cursor: pointer;
 }
 
 .info-button:hover {
@@ -115,6 +117,8 @@
   justify-content: center;
   gap: 20px;
   padding-left: 50px;
+  text-align: center;
+  align-items: center;
 }
 
 .info-input {

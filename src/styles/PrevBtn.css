@@ -1,12 +1,12 @@
 /* Group 1000003586 */
-.next_btn {
+.prev_btn {
   position: absolute;
-  background-color: transparent;
   border: transparent;
+  background-color: transparent;
 }
 
 /* Rectangle 7138 */
-.next_box {
+.prev_box {
   position: relative;
   width: 79px;
   height: 47px;
@@ -18,7 +18,7 @@
 }
 
 /* Group 1000003581 */
-.next_arrow_box {
+.prev_arrow_box {
   position: relative;
   width: 30px;
   height: 30px;
@@ -28,7 +28,7 @@
 }
 
 /* Arrow 5 */
-.next_arrow {
+.prev_arrow {
   box-sizing: border-box;
   position: relative;
   width: 30px;
