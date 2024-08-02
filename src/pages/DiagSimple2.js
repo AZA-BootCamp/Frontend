@@ -1,13 +1,24 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import image from '../assets/diag.png';
 import image_people from '../assets/diag_people.png';
 import Info from '../components/Info';
 import '../styles/DiagSimple2.css';
-import NextBtn from '../components/NextBtn';
+import PrevBtn from '../components/PrevBtn';
 import { FaArrowRight } from 'react-icons/fa6';
 import { FaHome } from 'react-icons/fa';
 
 const DiagSimple2 = () => {
+  const navigate = useNavigate();
+
+  const goto_home = () => {
+    navigate('/');
+  };
+
+  const goto_diagMore = () => {
+    navigate('/diagMore');
+  };
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -54,9 +65,21 @@ const DiagSimple2 = () => {
           text1="추천 브랜드"
           style={{ width: '222px', height: '50px' }}
           style2={{ width: '440px', height: '50px' }}
+          style3={{ marginLeft: '40px' }}
+          style4={{ marginLeft: '85px' }}
         />
-        <Info text1="추천 의류" style={{ width: '222px', height: '50px' }} />
-        <Info text1="추천 사이즈" style={{ width: '222px', height: '50px' }} />
+        <Info
+          text1="추천 의류"
+          style={{ width: '222px', height: '50px' }}
+          style3={{ marginLeft: '40px' }}
+          style4={{ marginLeft: '85px' }}
+        />
+        <Info
+          text1="추천 사이즈"
+          style={{ width: '222px', height: '50px' }}
+          style3={{ marginLeft: '40px' }}
+          style4={{ marginLeft: '85px' }}
+        />
       </div>
       <div className="diagsimple-title">
         <p className="diagsimple-title_text">간단 진단</p>
@@ -64,15 +87,23 @@ const DiagSimple2 = () => {
       </div>
       <div className="show_body"></div>
       <div className="goto-home">
-        <div className="goto-home_box">
+        <button className="goto-home_box" onClick={goto_home}>
           <FaHome className="home_icon" />
           <div className="goto-home_arrow_box">
             <FaArrowRight className="goto-home_arrow" />
           </div>
-        </div>
+        </button>
+      </div>
+      <div className="goto-diagMore">
+        <button className="goto-diagMore_box" onClick={goto_diagMore}>
+          <div className="goto-diagMore_arrow_box">
+            <FaArrowRight className="goto-diagMore_arrow" />
+          </div>
+          <p className="goto-diagMore_text">정밀 진단하러 가기</p>
+        </button>
       </div>
       <p className="diagsimple-detail"></p>
-      <NextBtn style1={{ width: '75px', height: '47px', left: '1563px', top: '775px' }} navigateTo="/diagSimple2" />
+      <PrevBtn style1={{ width: '75px', height: '47px', left: '313px', top: '695px' }} navigateTo="/diagSimple" />
     </div>
   );
 };

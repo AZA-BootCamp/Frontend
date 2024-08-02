@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
 import '../styles/Info.css';
 
-const Info = ({ text1, style, style2, navigateTo }) => {
+const Info = ({ text1, style, style2, style3, style4, navigateTo }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -43,7 +43,9 @@ const Info = ({ text1, style, style2, navigateTo }) => {
       default:
         return (
           <div className="info-units">
-            <span className="info-unit">{text1}</span>
+            <span className="info-unit" style={style4}>
+              {text1}
+            </span>
           </div>
         );
     }
@@ -52,7 +54,9 @@ const Info = ({ text1, style, style2, navigateTo }) => {
   return (
     <div className="info-group">
       <div className="info-group1">
-        <p className="category">{text1}</p>
+        <p className="category" style={style3}>
+          {text1}
+        </p>
         <div className="info-rectangle-outer" style={style}></div>
         <div className="info-rectangle-inner" style={style2}>
           {renderContent()}
