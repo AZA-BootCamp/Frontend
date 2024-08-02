@@ -1,0 +1,131 @@
+/* Group 1000003595 */
+.photo-group {
+  position: absolute;
+  width: 641px;
+  height: 200px;
+  left: calc(50% - 641px / 2 + 0.5px);
+  top: 185px;
+}
+
+/* Vector */
+.camera {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  left: 170px;
+  top: 60px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* File Upload */
+.choose-file_btn {
+  position: absolute;
+  width: 115px;
+  height: 45px;
+  top: 285px;
+  left: 550px;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  border: transparent;
+  border-radius: 40px;
+  background: #fff;
+  margin-top: 0px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.choose-file_text {
+  position: relative;
+  margin: 0px 0px 0px 0px;
+  width: 115px;
+  height: 24px;
+  left: -1px;
+  top: 0px;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+}
+
+.file-names {
+  position: absolute;
+  margin-top: 10px;
+  width: 500px;
+  height: 50px;
+  top: 250px;
+}
+
+.file-name {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-size: 24px;
+  color: #000;
+  padding-left: 70px;
+}
+
+.upload-btn {
+  position: absolute;
+  width: 132px;
+  height: 45px;
+  top: 295px;
+  left: 700px;
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.upload-btn:hover {
+  background: #444;
+}
+
+/* Upload */
+.upload_text {
+  position: relative;
+  margin: 0px 0px 0px 0px;
+  width: 115px;
+  height: 24px;
+  left: -11px;
+  top: 0px;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Rectangle 7064 */
+.filename-line {
+  position: absolute;
+  width: 490px;
+  height: 1px;
+  left: 17px;
+  top: 350px;
+  background: #000000;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+/* file_name */
+.filename_text {
+  position: absolute;
+  width: 425px;
+  height: 31px;
+  left: calc(50% - 425px / 2 - 74.5px);
+  top: 755px;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+}
