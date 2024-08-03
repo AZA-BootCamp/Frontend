@@ -184,3 +184,18 @@
   top: 0px;
   background: #ffffff;
 }
+
+.show_body {
+  /* Rectangle 7073 */
+
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 249px;
+  height: 389px;
+  left: 650px;
+  top: 235px;
+
+  background: #ffffff;
+  border: 1px solid rgba(185, 179, 255, 0.9);
+}

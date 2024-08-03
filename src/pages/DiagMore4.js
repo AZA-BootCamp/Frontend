@@ -8,7 +8,7 @@ import PrevBtn from '../components/PrevBtn';
 import { FaArrowRight } from 'react-icons/fa6';
 import { FaHome } from 'react-icons/fa';
 
-const DiagSimple2 = () => {
+const DiagMore4 = () => {
   const navigate = useNavigate();
 
   const goto_home = () => {
@@ -82,7 +82,7 @@ const DiagSimple2 = () => {
         />
       </div>
       <div className="diagsimple-title">
-        <p className="diagsimple-title_text">간단 진단</p>
+        <p className="diagsimple-title_text">정밀 진단</p>
         <div className="diagsimple-title_box"></div>
       </div>
       <div className="show_clothes"></div>
@@ -94,18 +94,10 @@ const DiagSimple2 = () => {
           </div>
         </button>
       </div>
-      <div className="goto-diagMore">
-        <button className="goto-diagMore_box" onClick={goto_diagMore}>
-          <div className="goto-diagMore_arrow_box">
-            <FaArrowRight className="goto-diagMore_arrow" />
-          </div>
-          <p className="goto-diagMore_text">정밀 진단하러 가기</p>
-        </button>
-      </div>
       <p className="diagsimple-detail"></p>
-      <PrevBtn style1={{ width: '75px', height: '47px', left: '313px', top: '695px' }} navigateTo="/diagSimple" />
+      <PrevBtn style1={{ width: '75px', height: '47px', left: '313px', top: '695px' }} navigateTo="/diagMore3" />
     </div>
   );
 };
 
-export default DiagSimple2;
+export default DiagMore4;
