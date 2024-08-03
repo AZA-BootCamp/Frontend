@@ -1,0 +1,160 @@
+.chat-background_img {
+  box-sizing: border-box;
+  position: absolute;
+  width: 1920px;
+  height: 821px;
+  top: 135px;
+  background: linear-gradient(0deg, rgba(185, 179, 255, 0.1), rgba(185, 179, 255, 0.1));
+}
+
+.chat-line {
+  position: absolute;
+  width: 1910px;
+  height: 0px;
+  left: 0px;
+  top: 131.5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
+
+.chatbot-container {
+  position: absolute;
+  width: 1324px;
+  height: 675px;
+  left: 318px;
+  top: 207px;
+
+  background: #ffffff;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.messages {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.message {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.message.user {
+  /* Rectangle 7135 */
+
+  box-sizing: border-box;
+
+  position: relative;
+  width: 600px;
+  height: 100px;
+  left: 650px;
+  margin-top: 50px;
+
+  background: #fcf4ff;
+  border: 3px solid #f5eff9;
+  border-radius: 20px;
+
+  align-self: flex-end;
+}
+
+/* 수정 필요 */
+.message.bot {
+  background-color: #f1f1f1;
+  align-self: flex-start;
+}
+
+.input-container {
+  position: relative;
+  width: 1246px;
+  height: 60px;
+  left: 40px;
+  top: -20px;
+}
+
+.input-box {
+  position: relative;
+  width: 1168px;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+}
+
+.input-rectangle {
+  position: relative;
+  width: 1168px;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+
+  background: #fcf4ff;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.chat-input[type='text'] {
+  border: none;
+
+  position: relative;
+  width: 1135px;
+  height: 55px;
+  left: 30px;
+  top: 5px;
+
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  /* or 133% */
+  display: flex;
+  align-items: center;
+
+  color: #676767;
+
+  z-index: 2;
+  background-color: transparent;
+  outline: none;
+}
+
+/* Group 1000003632 */
+.chatBtn-container {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  left: 1180px;
+  top: -60px;
+}
+
+/* Rectangle 7157 */
+.chatBtn-box {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+
+  background: #f5e9ff;
+  border: none;
+  border-radius: 20px;
+}
+/* react-icons/fi/FiSend */
+.chatBtn-icon {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  left: 0px;
+  top: 0px;
+}

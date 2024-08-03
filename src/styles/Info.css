@@ -133,6 +133,7 @@
   text-align: center;
   z-index: 3; /* 입력 필드를 클릭 가능하도록 설정 */
   pointer-events: auto; /* 클릭 가능하도록 설정 */
+  outline: none;
 }
 
 .info-unit {
