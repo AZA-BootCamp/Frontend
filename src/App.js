@@ -11,6 +11,8 @@ import DiagSimple from './pages/DiagSimple';
 import DiagSimple2 from './pages/DiagSimple2';
 import DiagMore from './pages/DiagMore';
 import DiagMore2 from './pages/DiagMore2';
+import DiagMore3 from './pages/DiagMore3';
+import DiagMore4 from './pages/DiagMore4';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="/diagSimple2" element={<DiagSimple2 />} />
           <Route path="/diagMore" element={<DiagMore />} />
           <Route path="/diagMore2" element={<DiagMore2 />} />
+          <Route path="/diagMore3" element={<DiagMore3 />} />
+          <Route path="/diagMore4" element={<DiagMore4 />} />
         </Routes>
       </Layout>
     </BrowserRouter>

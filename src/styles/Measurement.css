@@ -1,0 +1,117 @@
+.measurement-container1 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Info 컴포넌트 사이 간격 */
+  margin-top: 0px; /* 컨테이너와 상단 요소 사이 간격 */
+  width: 169.28px;
+  top: 235px;
+  left: 350px;
+}
+
+.measurement-container2 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Info 컴포넌트 사이 간격 */
+  margin-top: 0px; /* 컨테이너와 상단 요소 사이 간격 */
+  width: 169.28px;
+  bottom: 185.883px;
+  left: 1000px;
+}
+
+/* Group 1000003534 */
+.measurement-group {
+  position: relative;
+  width: 169.28px;
+  height: 120.06px;
+  left: 0px;
+  top: 0px;
+  z-index: 6;
+}
+
+/* Rectangle 7101 */
+.name-box {
+  position: relative;
+  width: 150px;
+  height: 34px;
+  left: 0px;
+  top: 0px;
+
+  background: #000000;
+  border-radius: 40px;
+
+  align-items: center;
+  text-align: center;
+}
+/* 가슴 둘레 */
+.name_text {
+  position: relative;
+  width: 150px;
+  height: 25px;
+  left: 36px;
+  top: 5px;
+
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  /* or 120% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+  margin: 0px 0px 0px 0px;
+}
+/* cm */
+.measurement-cm {
+  position: relative;
+  width: 47px;
+  height: 37px;
+  left: 125px;
+  top: 0px;
+
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 38px;
+
+  color: #000000;
+  margin: 0px 0px 0px 0px;
+}
+/* 100 */
+.measurement-count {
+  position: relative;
+  width: 62.26px;
+  height: 30.71px;
+  left: 45px;
+  top: 39px;
+
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 24px;
+  /* or 75% */
+
+  color: #000000;
+
+  opacity: 0.8;
+  margin: 0px 0px 0px 0px;
+}
+/* Rectangle 7102 */
+.measurement-line {
+  position: relative;
+  width: 169.28px;
+  height: 0.9px;
+  left: 0px;
+  top: 0px;
+
+  background: #000000;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
