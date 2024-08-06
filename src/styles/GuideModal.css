@@ -1,0 +1,107 @@
+/* Group 1000003657 */
+.guideModal-group {
+  position: absolute;
+  left: -330px;
+  top: -550px;
+  width: 644px;
+  height: 701px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  z-index: 6;
+}
+/* Rectangle 7159 */
+.guideModal-box {
+  position: absolute;
+  width: 644px;
+  height: 701px;
+
+  background: #ffffff;
+  border-radius: 50px;
+}
+/* react-icons/io/IoIosArrowRoundForward 
+
+position: absolute;
+width: 30px;
+height: 30px;
+
+/* Vector 
+
+position: absolute;
+left: 21.88%;
+right: 21.89%;
+top: 31.25%;
+bottom: 31.24%;
+
+background: #cfcfcf;*/
+
+/* react-icons/hi/HiOutlineDotsHorizontal 
+
+position: absolute;
+width: 50px;
+height: 50px;
+
+/* Vector (Stroke) 
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 41.67%;
+bottom: 41.67%;
+
+background: rgba(0, 0, 0, 0.19);*/
+
+/* react-icons/io/IoIosClose */
+.guideModal-close_icon {
+  position: relative;
+  top: 20px;
+  left: 590px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* 3111M_BD_A.A000-H000 
+
+position: absolute;
+width: 288px;
+height: 384px;
+
+background: url(3111M_BD_A.A000-H000.png);*/
+
+/* Photo Guide */
+.guideModal-modal_name {
+  box-sizing: border-box;
+
+  position: relative;
+  left: 20px;
+  width: 230px;
+  height: 24px;
+
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 24px;
+  /* identical to box height, or 69% */
+  text-align: center;
+
+  color: #d18888;
+}
+/* T자로 서있는 정면, 양 측면의 사진이 필요해요. */
+.guideModal-modal_text {
+  box-sizing: border-box;
+
+  position: relative;
+  left: 30px;
+  width: 399px;
+  height: 24px;
+
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height, or 120% */
+
+  color: #d18888;
+}

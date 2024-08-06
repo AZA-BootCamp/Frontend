@@ -68,41 +68,6 @@
   padding-left: 70px;
 }
 
-.upload-btn {
-  position: absolute;
-  width: 132px;
-  height: 45px;
-  top: 295px;
-  left: 700px;
-  padding: 10px 20px;
-  background: #000;
-  color: #fff;
-  border: none;
-  border-radius: 40px;
-  cursor: pointer;
-}
-
-.upload-btn:hover {
-  background: #444;
-}
-
-/* Upload */
-.upload_text {
-  position: relative;
-  margin: 0px 0px 0px 0px;
-  width: 115px;
-  height: 24px;
-  left: -11px;
-  top: 0px;
-  font-family: 'Merriweather';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 24px;
-  text-align: center;
-  color: #ffffff;
-}
-
 /* Rectangle 7064 */
 .filename-line {
   position: absolute;

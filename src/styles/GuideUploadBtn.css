@@ -1,0 +1,126 @@
+/* Group 1000003658 */
+.twoBtn-group {
+  position: absolute;
+  width: 526px;
+  height: 97px;
+  left: 788px;
+  top: 620px;
+}
+
+/* Group 1000003635 */
+.guideBtn-group {
+  position: absolute;
+  width: 151px;
+  height: 46px;
+  left: 0px;
+  top: 0px;
+}
+/* Rectangle 7065 */
+.guideBtn-box {
+  box-sizing: border-box;
+  position: absolute;
+  width: 151px;
+  height: 46px;
+  left: 0px;
+  top: 0px;
+  border: 1px solid #d18888;
+  border-radius: 40px;
+  cursor: pointer;
+  background-color: transparent;
+}
+/* Guide */
+.guideBtn-text {
+  box-sizing: border-box;
+  position: absolute;
+  width: 115px;
+  height: 24px;
+  left: 0px;
+  top: 0px;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 24px;
+  text-align: center;
+  color: #d18888;
+  border: 0px solid #d18888;
+  margin: 10px 0px 0px 15px;
+}
+
+.guideBtn-box:hover {
+  background-color: #d18888;
+}
+
+.guideBtn-box:hover .guideBtn-text {
+  color: #ffffff;
+}
+
+/* Group 1000003634 */
+.uploadBtn-group {
+  position: relative;
+  width: 151px;
+  height: 46px;
+  left: 210px;
+  top: 0px;
+}
+
+/* Rectangle 7065 */
+.uploadBtn-box {
+  box-sizing: border-box;
+  position: relative;
+  width: 151px;
+  height: 46px;
+  left: 0px;
+  top: 0px;
+  border: 1px solid #000000;
+  border-radius: 40px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.uploadBtn-text {
+  /* Upload */
+  box-sizing: border-box;
+  position: relative;
+  width: 115px;
+  height: 24px;
+  left: 11px;
+  top: 0px;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 24px;
+  text-align: center;
+  color: #515151;
+  margin: 0px 0px 0px 0px;
+}
+
+.uploadBtn-box:hover {
+  background: #444;
+}
+
+.uploadBtn-box:hover .uploadBtn-text {
+  color: #ffffff;
+}
+
+.uploadBtn-box:hover + .twoBtn-text {
+  display: block;
+}
+
+/* 전신이 다 나오도록, 정면과 양 측면 사진을 업로드 해주세요. */
+.twoBtn-text {
+  position: absolute;
+  width: 526px;
+  height: 25px;
+  left: -280px;
+  top: 50px;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #d18888;
+  display: none;
+}

@@ -4,7 +4,8 @@ import image_people from '../assets/diag_people.png';
 import '../styles/DiagSimple.css';
 import NextBtn from '../components/NextBtn';
 import PrevBtn from '../components/PrevBtn';
-import FileUpload from '../components/FileUpload';
+import Upload from '../components/Upload';
+import GuideUploadBtn from '../components/GuideUploadBtn';
 
 const DiagMore2 = () => {
   const [files, setFiles] = useState([]);
@@ -49,12 +50,13 @@ const DiagMore2 = () => {
         </div>
       </div>
       <div className="line"></div>
-      <FileUpload onFilesChange={setFiles} />
       <div className="diagsimple-title">
         <p className="diagsimple-title_text">정밀 진단</p>
         <div className="diagsimple-title_box"></div>
       </div>
       <p className="diagsimple-detail">사진 추가</p>
+      <Upload text="Drag files to upload" />
+      <GuideUploadBtn />
       <PrevBtn style1={{ width: '75px', height: '47px', left: '313px', top: '695px' }} navigateTo="/diagMore" />
       <NextBtn
         style1={{
