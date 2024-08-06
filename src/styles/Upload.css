@@ -1,0 +1,85 @@
+.upload-container {
+  position: absolute;
+  width: 844px;
+  height: 379px;
+  left: 550px;
+  top: 200px;
+  box-sizing: border-box;
+  border: 5px dashed #d9d9d9;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.upload-group {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 50px;
+}
+
+.upload-container:active {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.upload-container:hover + .twoBtn-text {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.upload-box {
+  position: absolute;
+  width: 409px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.upload-icon {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 40%;
+}
+
+.upload-text {
+  position: absolute;
+  width: 409px;
+  height: 39px;
+  top: 68%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Merriweather', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 24px;
+  color: #515151;
+}
+
+.file-list {
+  position: absolute;
+  top: 75%;
+  width: 100%;
+  text-align: center;
+}
+
+.file-name {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  color: #000;
+  margin-top: 10px;
+}
