@@ -1,16 +1,40 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import '../styles/Info.css';
 import Modal from './Modal';
+import { fetchBrands } from '../api/InfoApi'; // API 함수 가져오기
 
-const Info = ({ text1, style, style2, style3, style4, navigateTo }) => {
-  const navigate = useNavigate();
+const Info = ({ text1, style, style2, style3, style4, setValue }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const options = ['Brand 1', 'Brand 2', 'Brand 3']; // 예시 옵션 배열
+  const [selectedBrand, setSelectedBrand] = useState('');
+  const [selectedGender, setSelectedGender] = useState('');
+  const [height, setHeight] = useState('');
+  const [weight, setWeight] = useState('');
+  const [options, setOptions] = useState([]);
 
-  const handleClick = () => {
-    navigate(navigateTo);
+  useEffect(() => {
+    const loadBrands = async () => {
+      const brands = await fetchBrands();
+      setOptions(brands);
+    };
+
+    loadBrands();
+  }, []);
+
+  useEffect(() => {
+    if (text1 === '성별') setValue(selectedGender);
+    if (text1 === '키') setValue(height);
+    if (text1 === '몸무게') setValue(weight);
+    if (text1 === 'Brand') setValue(selectedBrand);
+  }, [selectedGender, height, weight, selectedBrand, text1, setValue]);
+
+  const handleSelectBrand = (brand) => {
+    setSelectedBrand(brand);
+    setModalOpen(false);
+  };
+
+  const handleGenderClick = (gender) => {
+    setSelectedGender(gender);
   };
 
   const renderContent = () => {
@@ -18,28 +42,50 @@ const Info = ({ text1, style, style2, style3, style4, navigateTo }) => {
       case '성별':
         return (
           <div className="info-buttons">
-            <button className="info-button">남성</button>
-            <button className="info-button">여성</button>
+            <button
+              className={` ${selectedGender === '남성' ? 'info-button-select' : 'info-button'}`}
+              onClick={() => handleGenderClick('남성')}
+            >
+              남성
+            </button>
+            <button
+              className={` ${selectedGender === '여성' ? 'info-button-select' : 'info-button'}`}
+              onClick={() => handleGenderClick('여성')}
+            >
+              여성
+            </button>
           </div>
         );
       case '키':
         return (
           <div className="info-units">
-            <input type="number" className="info-input" placeholder="키" />
+            <input
+              type="number"
+              className="info-input"
+              placeholder="키"
+              value={height}
+              onChange={(e) => setHeight(e.target.value)}
+            />
             <span className="info-unit">cm</span>
           </div>
         );
       case '몸무게':
         return (
           <div className="info-units">
-            <input type="number" className="info-input" placeholder="몸무게" />
+            <input
+              type="number"
+              className="info-input"
+              placeholder="몸무게"
+              value={weight}
+              onChange={(e) => setWeight(e.target.value)}
+            />
             <span className="info-unit">kg</span>
           </div>
         );
       case 'Brand':
         return (
           <div className="info-units">
-            <input type="text" className="info-input" placeholder="Brand" />
+            <input type="text" className="info-input" placeholder="Brand" value={selectedBrand} readOnly />
             <FaSearch className="info-icon" onClick={() => setModalOpen(true)} />
           </div>
         );
@@ -65,7 +111,7 @@ const Info = ({ text1, style, style2, style3, style4, navigateTo }) => {
           {renderContent()}
         </div>
       </div>
-      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} options={options} />
+      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} options={options} onSelect={handleSelectBrand} />
     </div>
   );
 };
