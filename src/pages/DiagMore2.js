@@ -6,6 +6,9 @@ import NextBtn from '../components/NextBtn';
 import PrevBtn from '../components/PrevBtn';
 import Upload from '../components/Upload';
 import GuideUploadBtn from '../components/GuideUploadBtn';
+import Loading from '../components/Loading';
+import FileState from '../components/FileState';
+import Done from '../components/Done';
 
 const DiagMore2 = () => {
   const [files, setFiles] = useState([]);
@@ -54,9 +57,16 @@ const DiagMore2 = () => {
         <p className="diagsimple-title_text">정밀 진단</p>
         <div className="diagsimple-title_box"></div>
       </div>
-      <p className="diagsimple-detail">사진 추가</p>
+      <p className="diagsimple-detail">Photo Upload</p>
       <Upload text="Drag files to upload" />
       <GuideUploadBtn />
+      {/*<Loading /> 업로드 중
+      <div className="fileState-container"> 파일 업로딩 상태
+        <FileState fileName="file23456.png" progress="20" />
+        <FileState fileName="file.png" progress="50" />
+        <FileState fileName="file.png" progress="100" />
+      </div>*/}
+      {/*<Done /> 파일 업로드 완료*/}
       <PrevBtn style1={{ width: '75px', height: '47px', left: '313px', top: '695px' }} navigateTo="/diagMore" />
       <NextBtn
         style1={{

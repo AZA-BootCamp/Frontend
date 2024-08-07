@@ -8,6 +8,7 @@
   background-color: #ffffff;
   border-radius: 50px;
   z-index: 6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 추가 */
 }
 /* Rectangle 7159 */
 .guideModal-box {
@@ -73,26 +74,26 @@ background: url(3111M_BD_A.A000-H000.png);*/
   box-sizing: border-box;
 
   position: relative;
-  left: 20px;
+  left: 200px;
   width: 230px;
   height: 24px;
 
   font-family: 'Merriweather';
-  font-style: normal;
+  font-style: bold;
   font-weight: 400;
   font-size: 35px;
   line-height: 24px;
   /* identical to box height, or 69% */
   text-align: center;
 
-  color: #d18888;
+  color: #000000;
 }
 /* T자로 서있는 정면, 양 측면의 사진이 필요해요. */
 .guideModal-modal_text {
   box-sizing: border-box;
 
   position: relative;
-  left: 30px;
+  left: 130px;
   width: 399px;
   height: 24px;
 
@@ -103,5 +104,6 @@ background: url(3111M_BD_A.A000-H000.png);*/
   line-height: 24px;
   /* identical to box height, or 120% */
 
-  color: #d18888;
+  color: #000000;
+  z-index: 6;
 }

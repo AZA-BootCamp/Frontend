@@ -16,7 +16,7 @@ const ImageSlider = ({ images, interval = 3000 }) => {
     <div className="slider">
       {images.map((image, index) => (
         <div key={index} className={`slide ${index === currentIndex ? 'active' : ''}`}>
-          <img src={image} style={{ width: '288px', height: '384px' }} alt={`Slide ${index}`} />
+          <img src={image} alt={`Slide ${index}`} />
         </div>
       ))}
     </div>

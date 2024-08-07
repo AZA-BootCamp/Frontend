@@ -1,9 +1,9 @@
 .slider {
   position: absolute;
-  top: 150px;
-  left: 180px;
-  width: 388px;
-  height: 384px;
+  top: 100px;
+  left: 125px;
+  width: 400px;
+  height: 550px;
   overflow: hidden;
 }
 
@@ -17,4 +17,11 @@
 
 .slide.active {
   opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: auto; /* 비율을 유지하면서 크기를 키우기 위해 height를 auto로 설정 */
+  max-height: 100%;
+  object-fit: contain; /* 비율 유지하며 크기 조절 */
 }
