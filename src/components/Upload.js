@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { IoCloudUpload } from 'react-icons/io5';
 import '../styles/Upload.css';
 
-const Upload = ({ text }) => {
+const Upload = ({ text, onUpload }) => {
   const [isActive, setActive] = useState(false);
   const [files, setFiles] = useState([]);
 
@@ -23,9 +23,9 @@ const Upload = ({ text }) => {
     setFiles(droppedFiles);
   };
 
-  const handleFilesChange = (e) => {
-    const selectedFiles = Array.from(e.target.files);
-    setFiles(selectedFiles);
+  const handleFilesChange = (event) => {
+    const files = Array.from(event.target.files);
+    onUpload(files);
   };
 
   return (

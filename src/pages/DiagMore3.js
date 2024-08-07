@@ -64,10 +64,10 @@ const DiagMore3 = () => {
       </div>
       <div className="show_body"></div>
       <div className="info-container" style={{ left: '1500px' }}>
-        <Info text1="남성" style2={{ width: '350px' }} />
+        {/*<Info text1="남성" style2={{ width: '350px' }} />
         <Info text1="키" style2={{ width: '350px' }} />
         <Info text1="몸무게" style2={{ width: '350px' }} />
-        <Info text1="BMI" style2={{ width: '350px' }} />
+        <Info text1="BMI" style2={{ width: '350px' }} />*/}
       </div>
       <PrevBtn style1={{ width: '75px', height: '47px', left: '313px', top: '695px' }} navigateTo="/diagMore2" />
       <NextBtn

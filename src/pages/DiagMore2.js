@@ -9,9 +9,16 @@ import GuideUploadBtn from '../components/GuideUploadBtn';
 import Loading from '../components/Loading';
 import FileState from '../components/FileState';
 import Done from '../components/Done';
+import { uploadFiles, listFiles, deleteFile } from '../api/UploadApi';
+import { useNavigate } from 'react-router';
 
 const DiagMore2 = () => {
   const [files, setFiles] = useState([]);
+  const [uploading, setUploading] = useState(false);
+  const [uploadProgress, setUploadProgress] = useState([]);
+  const [uploadComplete, setUploadComplete] = useState(false);
+  const [uploadedFiles, setUploadedFiles] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -39,6 +46,36 @@ const DiagMore2 = () => {
     };
   }, []);
 
+  const handleFileUpload = async (uploadedFiles) => {
+    setFiles(uploadedFiles);
+    setUploading(true);
+
+    try {
+      await uploadFiles(uploadedFiles);
+      setUploadProgress(uploadedFiles.map(() => 100));
+      setUploadComplete(true);
+      setUploading(false);
+      const files = await listFiles();
+      setUploadedFiles(files);
+    } catch (error) {
+      console.error('Error uploading files:', error);
+    }
+  };
+
+  const handleFileDelete = async (fileName) => {
+    try {
+      await deleteFile(fileName);
+      const files = await listFiles();
+      setUploadedFiles(files);
+    } catch (error) {
+      console.error('Error deleting file:', error);
+    }
+  };
+
+  const handleNextClick = async () => {
+    navigate('/diagMore3');
+  };
+
   return (
     <div className="diagsimple-group fade-element">
       <div className="content fade-element">
@@ -58,15 +95,42 @@ const DiagMore2 = () => {
         <div className="diagsimple-title_box"></div>
       </div>
       <p className="diagsimple-detail">Photo Upload</p>
-      <Upload text="Drag files to upload" />
-      <GuideUploadBtn />
-      {/*<Loading /> 업로드 중
-      <div className="fileState-container"> 파일 업로딩 상태
-        <FileState fileName="file23456.png" progress="20" />
-        <FileState fileName="file.png" progress="50" />
-        <FileState fileName="file.png" progress="100" />
-      </div>*/}
-      {/*<Done /> 파일 업로드 완료*/}
+      {!uploading && !uploadComplete && (
+        <>
+          <Upload text="Drag files to upload" onUpload={handleFileUpload} />
+          <GuideUploadBtn />
+        </>
+      )}
+      {uploading && (
+        <>
+          <Loading />
+          <div className="fileState-container">
+            {files.map((file, index) => (
+              <FileState
+                key={index}
+                fileName={file.name}
+                progress={uploadProgress[index] || 0}
+                onDelete={() => handleFileDelete(file.name)}
+              />
+            ))}
+          </div>
+        </>
+      )}
+      {uploadComplete && (
+        <>
+          <Done />
+          <div className="fileState-container">
+            {files.map((file, index) => (
+              <FileState
+                key={index}
+                fileName={file.name}
+                progress={uploadProgress[index] || 0}
+                onDelete={() => handleFileDelete(file.name)}
+              />
+            ))}
+          </div>
+        </>
+      )}
       <PrevBtn style1={{ width: '75px', height: '47px', left: '313px', top: '695px' }} navigateTo="/diagMore" />
       <NextBtn
         style1={{
@@ -75,7 +139,7 @@ const DiagMore2 = () => {
           left: '1563px',
           top: '695px',
         }}
-        navigateTo="/diagMore3"
+        onClick={handleNextClick}
       />
     </div>
   );
