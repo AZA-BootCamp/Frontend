@@ -1,0 +1,80 @@
+/* Group 1000003648 */
+.fileState-container {
+  position: relative;
+  width: 768px;
+  height: 142px;
+  left: 621px;
+  top: 558px;
+}
+
+/* Group 1000003645 */
+.filestate-group {
+  display: flex;
+  align-items: center; /* 수직 정렬 */
+  position: relative;
+  width: 768px;
+  height: 32px;
+  overflow: hidden; /* 부모 요소의 overflow를 숨깁니다 */
+}
+
+/* file.png */
+.filestate-name {
+  flex-shrink: 0; /* 요소가 줄어들지 않도록 설정 */
+  margin-right: 20px; /* 간격 조정 */
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+  white-space: nowrap; /* 텍스트가 한 줄로 유지되도록 설정 */
+  overflow: hidden; /* 넘치는 텍스트를 숨김 */
+  text-overflow: ellipsis; /* 넘치는 텍스트를 '...'로 표시 */
+  max-width: 70px; /* 최대 너비 설정 (필요에 따라 조정 가능) */
+}
+
+/* Group 1000003636 */
+.filestate-box3 {
+  display: flex;
+  align-items: center;
+  width: 540px;
+  height: 20px;
+  margin-right: 20px; /* 간격 조정 */
+}
+
+/* Rectangle 7129 */
+.max {
+  box-sizing: border-box;
+  width: 540px;
+  height: 20px;
+  border: transparent;
+  border-radius: 50px;
+  margin-right: 10px; /* 간격 조정 */
+  position: relative;
+}
+
+/* Rectangle 7125 */
+.percent {
+  position: absolute;
+  height: 100%; /* max 요소 높이와 일치 */
+  background: #8b8b8b;
+  border-radius: 50px;
+  top: 0;
+  left: 0;
+}
+
+/* react-icons/ri/RiErrorWarningFill */
+.filestate-error_icon,
+.filestate-check_icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px; /* 간격 조정 */
+}
+
+/* react-icons/io/IoIosClose */
+.filestate-close_icon {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}

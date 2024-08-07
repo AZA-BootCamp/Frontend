@@ -83,3 +83,34 @@
   color: #000;
   margin-top: 10px;
 }
+
+.CgSpinner {
+  font-size: 100px; /* adjust size as needed */
+  animation: spin 1.3s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Done */
+.done-text {
+  position: absolute;
+  width: 148px;
+  height: 31px;
+
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 24px;
+  /* or 60% */
+  text-align: center;
+
+  color: #515151;
+}
