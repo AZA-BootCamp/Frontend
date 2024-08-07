@@ -3,11 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/NextBtn.css';
 import { FaArrowRight } from 'react-icons/fa6';
 
-const NextBtn = ({ style1, navigateTo }) => {
+const NextBtn = ({ style1, onClick, navigateTo }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(navigateTo);
+    if (navigateTo) {
+      navigate(navigateTo);
+    } else if (onClick) {
+      onClick();
+    }
   };
 
   return (

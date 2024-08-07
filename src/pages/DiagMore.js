@@ -1,11 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import image from '../assets/diag.png';
 import image_people from '../assets/diag_people.png';
 import Info from '../components/Info';
 import '../styles/DiagSimple.css';
 import NextBtn from '../components/NextBtn';
+import { saveUserData } from '../api/InfoApi'; // API 함수 가져오기
+import { useNavigate } from 'react-router-dom';
 
 const DiagMore = () => {
+  const [gender, setGender] = useState('');
+  const [height, setHeight] = useState('');
+  const [weight, setWeight] = useState('');
+  const [brand, setBrand] = useState('');
+  const navigate = useNavigate();
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -33,6 +41,30 @@ const DiagMore = () => {
     };
   }, []);
 
+  const handleNextClick = async () => {
+    if (!gender || !height || !weight || !brand) {
+      alert('성별, 키, 몸무게, 브랜드를 모두 입력해주세요.');
+      return;
+    }
+
+    const userData = {
+      gender,
+      height: parseFloat(height),
+      weight: parseFloat(weight),
+      brand,
+    };
+
+    console.log('Sending user data:', userData); // 디버깅 로그 추가
+
+    try {
+      const message = await saveUserData(userData);
+      console.log(message);
+      navigate('/diagMore2');
+    } catch (error) {
+      console.error('Error saving user data:', error);
+    }
+  };
+
   return (
     <div className="diagsimple-group fade-element">
       <div className="content fade-element">
@@ -48,10 +80,10 @@ const DiagMore = () => {
       </div>
       <div className="line"></div>
       <div className="info-container">
-        <Info text1="성별" />
-        <Info text1="키" />
-        <Info text1="몸무게" />
-        <Info text1="Brand" />
+        <Info text1="성별" setValue={setGender} />
+        <Info text1="키" setValue={setHeight} />
+        <Info text1="몸무게" setValue={setWeight} />
+        <Info text1="Brand" setValue={setBrand} />
       </div>
       <div className="diagsimple-title">
         <p className="diagsimple-title_text">정밀 진단</p>
@@ -65,7 +97,7 @@ const DiagMore = () => {
           left: '1563px',
           top: '695px',
         }}
-        navigateTo="/diagMore2"
+        onClick={handleNextClick}
       />
     </div>
   );

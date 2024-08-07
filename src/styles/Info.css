@@ -111,7 +111,27 @@
   border-radius: 40px;
   color: #ffffff;
 }
+.info-button-select {
+  position: relative;
+  width: 127px;
+  height: 50px;
+  left: 30px;
+  top: -2px;
 
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 24px;
+  /* or 75% */
+
+  color: #ffffff;
+  border: none;
+  background-color: #000000;
+  padding: 0px 10px;
+  border-radius: 40px;
+  cursor: pointer;
+}
 .info-units {
   display: flex;
   justify-content: center;
