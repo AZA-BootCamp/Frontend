@@ -6,6 +6,9 @@ import '../styles/DiagSimple.css';
 import NextBtn from '../components/NextBtn';
 import { saveUserData } from '../api/InfoApi'; // API 함수 가져오기
 import { useNavigate } from 'react-router-dom';
+import ShortShirtBtn from '../components/ShortShirtBtn';
+import LongShirtBtn from '../components/LongShirtBtn';
+import PantsBtn from '../components/PantsBtn';
 
 const DiagMore = () => {
   const [gender, setGender] = useState('');
@@ -90,6 +93,14 @@ const DiagMore = () => {
         <div className="diagsimple-title_box"></div>
       </div>
       <p className="diagsimple-detail">기본 정보 입력</p>
+      {/* 브랜드가 선택된 경우에만 Ncategory-btn_box가 렌더링됩니다 */}
+      {brand && (
+        <div className="Ncategory-btn_box">
+          <ShortShirtBtn />
+          <LongShirtBtn />
+          <PantsBtn />
+        </div>
+      )}
       <NextBtn
         style1={{
           width: '75px',
