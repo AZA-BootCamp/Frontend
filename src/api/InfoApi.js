@@ -35,3 +35,17 @@ export const saveUserData = async (userData) => {
     throw error;
   }
 };
+
+export const fetchAvailableCategories = async (gender, brand) => {
+  try {
+    const response = await fetch(`${BASE_URL}/categories/${gender}/${brand}`);
+    if (!response.ok) {
+      throw new Error('Failed to fetch available categories');
+    }
+    const data = await response.json();
+    return Object.keys(data); // 피드백 데이터에서 카테고리 목록만 반환
+  } catch (error) {
+    console.error('Error fetching available categories:', error);
+    return [];
+  }
+};

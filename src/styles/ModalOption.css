@@ -23,6 +23,7 @@
 .option_box {
   width: 370px;
   height: 45px;
+  cursor: pointer;
 }
 
 .option_text {
