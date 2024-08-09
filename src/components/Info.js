@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import '../styles/Info.css';
 import Modal from './Modal';
-import { fetchBrands } from '../api/InfoApi'; // API 함수 가져오기
+import { fetchBrands, fetchAvailableCategories } from '../api/InfoApi'; // API 함수 가져오기
 
-const Info = ({ text1, style, style2, style3, style4, setValue }) => {
+const Info = ({ text1, style, style2, style3, style4, setValue, setCategories }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedBrand, setSelectedBrand] = useState('');
   const [selectedGender, setSelectedGender] = useState('');
@@ -27,6 +27,17 @@ const Info = ({ text1, style, style2, style3, style4, setValue }) => {
     if (text1 === '몸무게') setValue(weight);
     if (text1 === 'Brand') setValue(selectedBrand);
   }, [selectedGender, height, weight, selectedBrand, text1, setValue]);
+
+  useEffect(() => {
+    const loadCategories = async () => {
+      if (selectedGender && selectedBrand) {
+        const categories = await fetchAvailableCategories(selectedGender, selectedBrand);
+        setCategories(categories);
+      }
+    };
+
+    loadCategories();
+  }, [selectedGender, selectedBrand, setCategories]);
 
   const handleSelectBrand = (brand) => {
     setSelectedBrand(brand);

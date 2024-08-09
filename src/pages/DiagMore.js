@@ -4,7 +4,7 @@ import image_people from '../assets/diag_people.png';
 import Info from '../components/Info';
 import '../styles/DiagSimple.css';
 import NextBtn from '../components/NextBtn';
-import { saveUserData } from '../api/InfoApi'; // API 함수 가져오기
+import { saveUserData, fetchAvailableCategories } from '../api/InfoApi';
 import { useNavigate } from 'react-router-dom';
 import ShortShirtBtn from '../components/ShortShirtBtn';
 import LongShirtBtn from '../components/LongShirtBtn';
@@ -15,6 +15,8 @@ const DiagMore = () => {
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
   const [brand, setBrand] = useState('');
+  const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -27,11 +29,10 @@ const DiagMore = () => {
         });
       },
       {
-        threshold: 0.1, // 요소가 10% 이상 보일 때 콜백 실행
+        threshold: 0.1,
       }
     );
 
-    // 감시할 요소들 선택
     const elements = document.querySelectorAll('.fade-element');
     elements.forEach((element) => {
       observer.observe(element);
@@ -44,9 +45,26 @@ const DiagMore = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (gender && brand) {
+      const fetchCategories = async () => {
+        try {
+          const feedback = await fetchAvailableCategories(gender, brand);
+          setCategories(feedback);
+        } catch (error) {
+          console.error('Error fetching brand feedback:', error);
+          setCategories([]);
+        }
+      };
+      fetchCategories();
+    } else {
+      setCategories([]);
+    }
+  }, [gender, brand]);
+
   const handleNextClick = async () => {
-    if (!gender || !height || !weight || !brand) {
-      alert('성별, 키, 몸무게, 브랜드를 모두 입력해주세요.');
+    if (!gender || !height || !weight || !brand || !selectedCategory) {
+      alert('성별, 키, 몸무게, 브랜드 및 카테고리를 모두 입력해주세요.');
       return;
     }
 
@@ -55,9 +73,8 @@ const DiagMore = () => {
       height: parseFloat(height),
       weight: parseFloat(weight),
       brand,
+      category: selectedCategory, // 선택된 카테고리 추가
     };
-
-    console.log('Sending user data:', userData); // 디버깅 로그 추가
 
     try {
       const message = await saveUserData(userData);
@@ -93,12 +110,11 @@ const DiagMore = () => {
         <div className="diagsimple-title_box"></div>
       </div>
       <p className="diagsimple-detail">기본 정보 입력</p>
-      {/* 브랜드가 선택된 경우에만 Ncategory-btn_box가 렌더링됩니다 */}
-      {brand && (
+      {categories.length > 0 && (
         <div className="Ncategory-btn_box">
-          <ShortShirtBtn />
-          <LongShirtBtn />
-          <PantsBtn />
+          {categories.includes('반팔') && <ShortShirtBtn onCategorySelect={setSelectedCategory} />}
+          {categories.includes('긴팔') && <LongShirtBtn onCategorySelect={setSelectedCategory} />}
+          {categories.includes('바지') && <PantsBtn onCategorySelect={setSelectedCategory} />}
         </div>
       )}
       <NextBtn
