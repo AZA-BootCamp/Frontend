@@ -1,0 +1,76 @@
+/* Group 1000003659 */
+.category-btn_group {
+  position: relative;
+  width: 139px;
+  height: 50px;
+  left: 0px;
+  top: 0px;
+}
+
+/* Rectangle 7126 */
+.category-btn_box {
+  position: relative;
+  width: 139px;
+  height: 50px;
+  left: 0px;
+  top: 0px;
+
+  background: #ffffff;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Rectangle 7126 */
+.category-btn_box:hover,
+.category-btn_box:active {
+  position: relative;
+  width: 139px;
+  height: 50px;
+  left: 0px;
+  top: 0px;
+
+  background: #000000;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+/* 반팔 */
+.category-btn_text {
+  position: relative;
+  width: 108.22px;
+  height: 25.32px;
+  left: 8px;
+  top: -19px;
+
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 24px;
+  /* or 75% */
+  text-align: center;
+
+  color: #000000;
+}
+
+/* 반팔 */
+.category-btn_text:active,
+.category-btn_text:hover {
+  position: relative;
+  width: 108.22px;
+  height: 25.32px;
+  left: 8px;
+  top: -19px;
+
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 24px;
+  /* or 75% */
+  text-align: center;
+
+  color: #ffffff;
+}
