@@ -124,6 +124,7 @@ const DiagMore2 = () => {
               <FileState
                 key={index}
                 fileName={file.name}
+                nameStyle={{ maxWidth: '70px' }}
                 progress={uploadProgress[index] || 0}
                 onDelete={() => handleFileDelete(file.name)}
               />

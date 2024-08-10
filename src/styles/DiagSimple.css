@@ -211,5 +211,70 @@
   width: 238px;
   height: 385px;
   left: 1370px;
-  top: 260px;
+  top: 280px;
+}
+
+.Ncategory-btn_back {
+  /* Rectangle 7125 */
+  position: absolute;
+  width: 238px;
+  height: 385px;
+  left: 0px;
+  top: -65px;
+
+  background: rgba(217, 217, 217, 0.62);
+  border-radius: 40px;
+}
+
+/* Group 1000003664 */
+.review-box {
+  position: absolute;
+  width: 797px;
+  height: 385px;
+  left: 555px;
+  top: 132px;
+}
+
+/* 이 옷에 대해 다른 사람들은 */
+.review-title {
+  position: absolute;
+  width: 372px;
+  height: 50px;
+  left: calc(50% - 372px / 2 + 502px);
+  top: 100px;
+
+  font-family: 'Merriweather';
+  font-style: bold;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  /* or 125% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+  z-index: 2;
+}
+
+/* Group 1000003648 */
+.review-container {
+  position: relative;
+  width: 768px;
+  height: 142px;
+  left: 535px;
+  top: 257px;
+  z-index: 2;
+}
+
+/* Rectangle 7125 */
+.review-back {
+  position: absolute;
+  width: 781px;
+  height: 385px;
+  left: calc(50% - 781px / 2 + 501.5px);
+  top: calc(50% - 385px / 2 + 64.5px);
+
+  background: rgba(217, 217, 217, 0.62);
+  border-radius: 40px;
 }

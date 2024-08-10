@@ -3,7 +3,7 @@ import { RiErrorWarningFill } from 'react-icons/ri';
 import { IoIosClose, IoIosCheckmarkCircle } from 'react-icons/io';
 import '../styles/FileState.css';
 
-const FileState = ({ fileName, progress, onDelete }) => {
+const FileState = ({ fileName, nameStyle, progress, onDelete }) => {
   const percentStyle = {
     width: `${progress}%`,
     backgroundColor: progress === 100 ? '#000000' : '#8b8b8b',
@@ -11,7 +11,9 @@ const FileState = ({ fileName, progress, onDelete }) => {
 
   return (
     <div className="filestate-group">
-      <p className="filestate-name">{fileName}</p>
+      <p className="filestate-name" style={nameStyle}>
+        {fileName}
+      </p>
       <div className="filestate-box3">
         <div className="max">
           <div className="percent" style={percentStyle}></div>

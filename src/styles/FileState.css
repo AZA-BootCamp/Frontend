@@ -15,6 +15,7 @@
   width: 768px;
   height: 32px;
   overflow: hidden; /* 부모 요소의 overflow를 숨깁니다 */
+  z-index: 3;
 }
 
 /* file.png */
@@ -31,7 +32,7 @@
   white-space: nowrap; /* 텍스트가 한 줄로 유지되도록 설정 */
   overflow: hidden; /* 넘치는 텍스트를 숨김 */
   text-overflow: ellipsis; /* 넘치는 텍스트를 '...'로 표시 */
-  max-width: 70px; /* 최대 너비 설정 (필요에 따라 조정 가능) */
+  /*max-width: 70px;  최대 너비 설정 (필요에 따라 조정 가능) */
 }
 
 /* Group 1000003636 */
@@ -41,17 +42,21 @@
   width: 540px;
   height: 20px;
   margin-right: 20px; /* 간격 조정 */
+  margin-left: 0px;
 }
 
 /* Rectangle 7129 */
 .max {
+  position: absolute;
   box-sizing: border-box;
   width: 540px;
   height: 20px;
-  border: transparent;
   border-radius: 50px;
   margin-right: 10px; /* 간격 조정 */
   position: relative;
+  border: transparent;
+  z-index: 6;
+  background: #d9d9d9;
 }
 
 /* Rectangle 7125 */

@@ -5,6 +5,7 @@
   height: 50px;
   left: 0px;
   top: 0px;
+  z-index: 2;
 }
 
 /* Rectangle 7126 */
@@ -19,6 +20,7 @@
   border-radius: 40px;
   border: none;
   cursor: pointer;
+  z-index: 3;
 }
 
 /* Rectangle 7126 */
@@ -34,6 +36,7 @@
   border-radius: 40px;
   border: none;
   cursor: pointer;
+  z-index: 3;
 }
 
 /* 반팔 */

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import image from '../assets/diag.png';
 import image_people from '../assets/diag_people.png';
@@ -7,17 +7,12 @@ import '../styles/DiagSimple2.css';
 import PrevBtn from '../components/PrevBtn';
 import { FaArrowRight } from 'react-icons/fa6';
 import { FaHome } from 'react-icons/fa';
+import FeedbackRender from '../components/FeedbackRender';
+import { getUserFeedback } from '../api/GetFeedback';
 
 const DiagSimple2 = () => {
+  const [feedbackData, setFeedbackData] = useState(null);
   const navigate = useNavigate();
-
-  const goto_home = () => {
-    navigate('/');
-  };
-
-  const goto_diagMore = () => {
-    navigate('/diagMore');
-  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -29,11 +24,10 @@ const DiagSimple2 = () => {
         });
       },
       {
-        threshold: 0.1, // 요소가 10% 이상 보일 때 콜백 실행
+        threshold: 0.1,
       }
     );
 
-    // 감시할 요소들 선택
     const elements = document.querySelectorAll('.fade-element');
     elements.forEach((element) => {
       observer.observe(element);
@@ -45,6 +39,27 @@ const DiagSimple2 = () => {
       });
     };
   }, []);
+
+  useEffect(() => {
+    const fetchFeedback = async () => {
+      try {
+        const data = await getUserFeedback(); // 저장된 사용자 데이터를 기반으로 피드백 데이터 요청
+        setFeedbackData(data); // 상태에 저장
+      } catch (error) {
+        console.error('Error fetching feedback:', error);
+      }
+    };
+
+    fetchFeedback(); // 컴포넌트가 마운트될 때 피드백 데이터를 가져옴
+  }, []);
+
+  const goto_home = () => {
+    navigate('/');
+  };
+
+  const goto_diagMore = () => {
+    navigate('/diagMore');
+  };
 
   return (
     <div className="diagsimple-group fade-element">
@@ -85,7 +100,11 @@ const DiagSimple2 = () => {
         <p className="diagsimple-title_text">간단 진단</p>
         <div className="diagsimple-title_box"></div>
       </div>
-      <div className="show_clothes"></div>
+      <div className="review-box">
+        <p className="review-title">이 옷에 대해 다른 사람들은</p>
+        <div className="review-container">{feedbackData && <FeedbackRender feedbackData={feedbackData} />}</div>
+        <div className="review-back"></div>
+      </div>
       <div className="goto-home">
         <button className="goto-home_box" onClick={goto_home}>
           <FaHome className="home_icon" />
