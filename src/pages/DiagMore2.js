@@ -10,6 +10,7 @@ import Loading from '../components/Loading';
 import FileState from '../components/FileState';
 import Done from '../components/Done';
 import { uploadFiles, listFiles, deleteFile } from '../api/UploadApi';
+import { predict } from '../api/PredictApi'; // Import the predict API function
 import { useNavigate } from 'react-router';
 
 const DiagMore2 = () => {
@@ -73,7 +74,13 @@ const DiagMore2 = () => {
   };
 
   const handleNextClick = async () => {
-    navigate('/diagMore3');
+    try {
+      const result = await predict();
+      console.log('Prediction result:', result);
+      navigate('/diagMore3'); // navigate to the next page after prediction
+    } catch (error) {
+      console.error('Error during prediction:', error);
+    }
   };
 
   return (
@@ -140,7 +147,7 @@ const DiagMore2 = () => {
           left: '1563px',
           top: '695px',
         }}
-        onClick={handleNextClick}
+        onClick={handleNextClick} // Trigger prediction on next click
       />
     </div>
   );

@@ -18,7 +18,7 @@
   gap: 20px; /* Info 컴포넌트 사이 간격 */
   margin-top: 0px; /* 컨테이너와 상단 요소 사이 간격 */
   width: 169.28px;
-  bottom: 185.883px;
+  bottom: 105.883px;
   left: 1000px;
 }
 
@@ -89,8 +89,8 @@
   position: relative;
   width: 62.26px;
   height: 30.71px;
-  left: 45px;
-  top: 39px;
+  left: 30px;
+  top: 37px;
 
   font-family: 'Merriweather';
   font-style: normal;
