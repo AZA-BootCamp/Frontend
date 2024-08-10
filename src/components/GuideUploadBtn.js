@@ -45,7 +45,7 @@ const GuideUploadBtn = ({ onFilesChange }) => {
             <p className="uploadBtn-text">Upload</p>
           </form>
         </button>
-        <p className="twoBtn-text">전신이 다 나오도록, 정면과 양 측면 사진을 업로드 해주세요.</p>
+        <p className="twoBtn-text">Guide 버튼을 눌러 가이드를 확인해 주세요.</p>
         <GuideModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
       </div>
     </div>

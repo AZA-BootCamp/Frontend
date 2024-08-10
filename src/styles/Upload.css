@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   background: transparent;
+  z-index: 10;
 }
 
 .upload-group {
@@ -24,14 +25,10 @@
   border-radius: 50px;
 }
 
-.upload-container:active {
+.upload-container:active,
+.upload-container:hover {
   background-color: rgba(0, 0, 0, 0.1);
   border: none;
-}
-
-.upload-container:hover + .twoBtn-text {
-  border: none;
-  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .upload-box {
