@@ -115,6 +115,7 @@ const DiagSimple = () => {
           {categories.includes('반팔') && <ShortShirtBtn onCategorySelect={setSelectedCategory} />}
           {categories.includes('긴팔') && <LongShirtBtn onCategorySelect={setSelectedCategory} />}
           {categories.includes('바지') && <PantsBtn onCategorySelect={setSelectedCategory} />}
+          <div className="Ncategory-btn_back"></div>
         </div>
       )}
       <NextBtn
