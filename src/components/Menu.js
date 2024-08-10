@@ -15,9 +15,6 @@ const Menu = ({ showLogin }) => {
   const goto_More = () => {
     Navigate('/more');
   };
-  const goto_Login = () => {
-    Navigate('/login');
-  };
 
   return (
     <div className="menu_box">
@@ -30,11 +27,6 @@ const Menu = ({ showLogin }) => {
       <button className="More" onClick={goto_More}>
         More
       </button>
-      {showLogin && (
-        <button className="Login" onClick={goto_Login}>
-          Login
-        </button>
-      )}
     </div>
   );
 };

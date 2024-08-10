@@ -35,7 +35,8 @@ const GuideModal = ({ isOpen, onClose }) => {
       <div className="guideModal-group" ref={modalRef}>
         <IoIosClose className="guideModal-close_icon" onClick={onClose} />
         <p className="guideModal-modal_name">Photo Guide</p>
-        <p className="guideModal-modal_text">T자로 서있는 정면, 양 측면의 사진이 필요해요.</p>
+        <p className="guideModal-modal_text">T자로 서있는 정면, 양 측면의 사진을 순서대로 업로드 해주세요.</p>
+        <p className="guideModal-modal_text">깔끔한 배경에서 찍은 사진일수록 좋아요.</p>
         <ImageSlider images={images} interval={2000} />
       </div>
     </div>

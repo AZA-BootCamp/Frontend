@@ -1,8 +1,22 @@
+/* Modal Overlay */
+.guideModal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
 /* Group 1000003657 */
 .guideModal-group {
-  position: absolute;
-  left: -330px;
-  top: -550px;
+  position: relative;
+  left: 0px;
+  top: 0px;
   width: 644px;
   height: 701px;
   background-color: #ffffff;
@@ -59,6 +73,7 @@ background: rgba(0, 0, 0, 0.19);*/
   width: 30px;
   height: 30px;
   cursor: pointer;
+  color: #d18888;
 }
 
 /* 3111M_BD_A.A000-H000 
@@ -86,16 +101,17 @@ background: url(3111M_BD_A.A000-H000.png);*/
   /* identical to box height, or 69% */
   text-align: center;
 
-  color: #000000;
+  color: #d18888;
 }
 /* T자로 서있는 정면, 양 측면의 사진이 필요해요. */
 .guideModal-modal_text {
   box-sizing: border-box;
 
   position: relative;
-  left: 130px;
-  width: 399px;
+  left: 70px;
+  width: 500px;
   height: 24px;
+  text-align: center;
 
   font-family: 'Merriweather';
   font-style: normal;
@@ -104,6 +120,6 @@ background: url(3111M_BD_A.A000-H000.png);*/
   line-height: 24px;
   /* identical to box height, or 120% */
 
-  color: #000000;
+  color: #d18888;
   z-index: 6;
 }
