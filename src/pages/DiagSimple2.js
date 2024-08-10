@@ -8,7 +8,7 @@ import PrevBtn from '../components/PrevBtn';
 import { FaArrowRight } from 'react-icons/fa6';
 import { FaHome } from 'react-icons/fa';
 import FeedbackRender from '../components/FeedbackRender';
-import { getUserFeedback } from '../api/GetFeedback';
+import { getUserFeedback } from '../api/GetFeedbackApi';
 
 const DiagSimple2 = () => {
   const [feedbackData, setFeedbackData] = useState(null);

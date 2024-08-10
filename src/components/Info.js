@@ -54,14 +54,14 @@ const Info = ({ text1, style, style2, style3, style4, setValue, setCategories })
         return (
           <div className="info-buttons">
             <button
-              className={` ${selectedGender === '남성' ? 'info-button-select' : 'info-button'}`}
-              onClick={() => handleGenderClick('남성')}
+              className={` ${selectedGender === 'male' ? 'info-button-select' : 'info-button'}`}
+              onClick={() => handleGenderClick('male')}
             >
               남성
             </button>
             <button
-              className={` ${selectedGender === '여성' ? 'info-button-select' : 'info-button'}`}
-              onClick={() => handleGenderClick('여성')}
+              className={` ${selectedGender === 'female' ? 'info-button-select' : 'info-button'}`}
+              onClick={() => handleGenderClick('female')}
             >
               여성
             </button>
