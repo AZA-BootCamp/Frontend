@@ -1,0 +1,58 @@
+/* Group 1000003564
+logo group */
+.aboutAZA-logog {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 500px;
+  height: 150px;
+  left: 1119px;
+  top: 297px;
+}
+/* Group 1000003564 */
+
+/* Ellipse 6 
+  logo circle*/
+.aboutAZA-logoc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 150px;
+  border-radius: 50%;
+  /* Ellipse 6 */
+
+  position: absolute;
+  left: 65.15%;
+  right: 15.23%;
+  top: 13.5%;
+  bottom: 58.61%;
+
+  background: #000000;
+}
+
+/* AZA */
+.aboutAZA-logotext {
+  position: absolute;
+  display: flex;
+  width: 150px;
+  height: 150px;
+  top: 0%; /* 상단에서 50% 아래로 */
+  left: 50%; /* 왼쪽에서 50% 오른쪽으로 */
+  transform: translate(-50%, -50%); /* 중앙으로 이동 */
+
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 91px;
+
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+
+  border: none;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

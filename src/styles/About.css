@@ -1,0 +1,459 @@
+/* About AZA */
+
+.aboutAZA-frame {
+  position: relative;
+  width: 1920px;
+  height: 821px;
+
+  background: #ffffff;
+}
+/* 질문들의 컨테이너
+ Rectangle 7160 */
+.containerq {
+  display: flex;
+  /* position: absolute; */
+  width: 660px;
+  height: 380px;
+  left: 183px;
+  top: 100px;
+  margin-left: 250px;
+  margin-top: 120px;
+  padding: 0;
+
+  /*또는 space-between, 필요에 따라 조정 */
+  align-content: space-between;
+  flex-direction: column; /* 수직 정렬 */
+  justify-content: flex-start; /* 컴포넌트들이 위에서 아래로 시작 */
+  gap: 40px;
+  /* padding: 10px; */
+  z-index: 10;
+  /* background-color: red; */
+}
+/* DALL·E 2024-07-19 19.01.37 - another different 2D rendering of abstract shapes made of transparent material with blue and purple hues, with smooth and fluid curves, similar to the 1 */
+.aboutAZA-backimage {
+  position: absolute;
+  /* box-sizing: border-box; */
+  width: 1920px;
+  height: 821px;
+  /* left: calc(50% - 2283px / 2 + 0.5px); */
+  top: 135px;
+  background-image: url("../assets/main.png");
+  z-index: 1;
+}
+
+/* Group 1000003571 */
+/* benefit container group*/
+.aboutAZA-benecontainerg {
+  position: absolute;
+  width: 713px;
+  height: 220px;
+  left: 968px;
+  top: 744px;
+
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Ellipse 13 
+benefit container마지막 그림자*/
+
+.aboutAZA-beneshadlast {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  left: 1534px;
+  top: 544px;
+  border-radius: 100px;
+  z-index: 5;
+  opacity: 0.6;
+
+  background: rgba(214, 212, 240, 0.5);
+}
+
+/* benefit container 사각형
+ Rectangle 7134 */
+.aboutAZA-benecontainer {
+  position: absolute;
+  width: 504px;
+  height: 220px;
+  left: 1145px;
+  top: 544px;
+  z-index: 4;
+  opacity: 0.6;
+  background: rgba(214, 212, 240, 0.5);
+}
+
+/* benefit container 첫번째 그림자
+Ellipse 12 */
+.aboutAZA-beneshadfir {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  left: 1035px;
+  top: 544px;
+  border-radius: 100px;
+  z-index: 5;
+  opacity: 0.6;
+
+  background: rgba(214, 212, 240, 0.5);
+}
+
+/* 첫번째 질문 group
+Group 1000003566 */
+/* .aboutAZA-fqg {
+  position: absolute;
+  width: 600px;
+  height: 60px;
+  left: 247px;
+  top: 301px;
+} */
+
+/* Rectangle 7125 */
+/* .aboutAZA-qbox {
+  position: absolute;
+  width: 600px;
+  height: 60px;
+  left: calc(50% - 600px / 2 - 413px);
+  top: calc(50% - 60px / 2 - 209px);
+
+  background: #d6d4f0b3;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+} */
+
+/* 해외 쇼핑몰 의류가 핏이 안 맞는 경우가 있으셨나요? */
+/* .aboutAZA-qtext {
+  position: absolute;
+  width: 600px;
+  height: 60px;
+  left: 247px;
+  top: 301px;
+
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+} */
+
+/* Group 1000003567 */
+.aboutAZA-sqg {
+  position: absolute;
+  width: 600px;
+  height: 60px;
+  left: 247px;
+  top: 425px;
+}
+
+/* Rectangle 7125 */
+.aboutAZA-sqbox {
+  position: absolute;
+  width: 600px;
+  height: 60px;
+  left: calc(50% - 600px / 2 - 413px);
+  top: calc(50% - 60px / 2 - 85px);
+
+  background: rgba(214, 212, 240, 0.7);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+}
+
+/* 해외 쇼핑몰 사이트의 사이즈 가이드가 불편하셨나요? */
+.aboutAZA-sqtext {
+  position: absolute;
+  width: 600px;
+  height: 60px;
+  left: 247px;
+  top: 425px;
+
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/* Group 1000003568 */
+.aboutAZA-tqg {
+  position: absolute;
+  width: 600px;
+  height: 60px;
+  left: 246px;
+  top: 553px;
+}
+
+/* Rectangle 7125 */
+.aboutAZA-tqbox {
+  position: absolute;
+  width: 600px;
+  height: 60px;
+  left: calc(50% - 600px / 2 - 414px);
+  top: calc(50% - 60px / 2 + 43px);
+
+  background: rgba(214, 212, 240, 0.7);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+}
+
+/* 번거로운 반품 및 교환을 줄이고 싶으신가요? */
+.aboutAZA-tqtext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 600px;
+  height: 60px;
+  left: 246px;
+  top: 553px;
+
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/* Group 1000003563 
+logo바로 밑에 존재하는 그룹*/
+.aboutAZA-logobottomg {
+  position: absolute;
+  width: 390px;
+  height: 144px;
+  left: 130px;
+  top: 485px;
+}
+
+/* AI 기반 맞춤형 의류 추천 서비스 */
+.aboutAZA-logobottomtext {
+  position: absolute;
+  width: 400px;
+  height: 144px;
+  left: 1220px;
+  top: 235px;
+
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 80px;
+  /* or 167% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/* Arrow 4 */
+.aboutAZA-arrow {
+  /* box-sizing: border-box; */
+
+  position: relative;
+  width: 87px;
+  height: 0px;
+  margin-left: 972px;
+
+  border: 7px solid #000000;
+}
+/* Arrow 4 */
+/* Group 1000003566 */
+
+/* Group 1000003566 
+benefit 두번째 그룹*/
+.aboutAZA-sbg {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 1225px;
+  top: 755px;
+}
+
+/* Ellipse 9 
+benefit 2번째 원*/
+.aboutAZA-sbc {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 1295px;
+  top: 555px;
+  z-index: 6;
+  border-radius: 100px;
+  opacity: 0.7;
+  background: rgba(77, 65, 96, 0.8);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* 해외 의류 사이즈 추천 서비스 제공 */
+.aboutAZA-sbtext {
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  left: 1325px;
+  top: 550px;
+
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 35px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  z-index: 8;
+  color: #ffffff;
+}
+
+/* Group 1000003569
+첫번째 benefit 그룹 */
+.aboutAZA-fbg {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 976px;
+  top: 755px;
+}
+
+/* Ellipse 9 */
+.aboutAZA-fbc {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 1046px;
+  top: 554px;
+  border-radius: 100px;
+  z-index: 6;
+
+  opacity: 0.7;
+
+  background: rgba(77, 65, 96, 0.8);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* 쉬운 신체 치수 측정 서비스 제공 */
+.aboutAZA-fbtext {
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  left: 1055px;
+  top: 550px;
+  z-index: 8;
+
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 35px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+/* Group 1000003570
+세번째 benefit 그룹 */
+.aboutAZA-tbg {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 1474px;
+  top: 555px;
+}
+
+/* Ellipse 9 */
+.aboutAZA-tbc {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 1544px;
+  top: 555px;
+  z-index: 6;
+  opacity: 0.7;
+  border-radius: 100px;
+  background: rgba(77, 65, 96, 0.8);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* 교환 및 반품 사례 감소 */
+.aboutAZA-tbtext {
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  left: 1564px;
+  top: 560px;
+  z-index: 8;
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 35px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+/* Group 1000003596 */
+.aboutAZA-headerg {
+  position: absolute;
+  width: 1920px;
+  height: 205px;
+  left: 0px;
+  top: 2px;
+}
+
+/* Group 1000003556 */
+.aboutAZA-headerlogog {
+  position: absolute;
+  width: 137px;
+  height: 57px;
+  left: 300px;
+  top: 82px;
+}
+
+/* Ellipse 6 */
+.aboutAZA-logoc {
+  position: absolute;
+  left: 16.56%;
+  right: 78.23%;
+  top: 7.59%;
+  bottom: 87.78%;
+
+  background: #000000;
+}
+
+/* AZA */
+.aboutAZA-logotext {
+  position: absolute;
+  width: 137px;
+  height: 51px;
+  left: calc(50% - 137px / 2 - 591.5px);
+  top: calc(50% - 51px / 2 - 426.5px);
+
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+
+  color: #ffffff;
+
+  border: 1px solid #000000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
