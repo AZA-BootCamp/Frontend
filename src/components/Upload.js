@@ -41,6 +41,7 @@ const Upload = ({ text, onUpload }) => {
           <IoCloudUpload className="upload-icon" />
           <p className="upload-text">{text}</p>
           <input type="file" multiple onChange={handleFilesChange} style={{ display: 'none' }} />
+          <p className="upload-text1">Only PNG, JPG</p>
         </div>
       </label>
       {files.length > 0 && (

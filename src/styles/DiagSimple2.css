@@ -21,7 +21,7 @@
   position: relative;
   width: 1920px;
   height: 821px;
-  top: 110px;
+  top: 130px;
   background: #ffffff;
 }
 
@@ -139,7 +139,7 @@
 /* 기본 정보 입력 */
 .diagsimple-detail {
   position: relative;
-  width: 170px;
+  width: 500px;
   height: 39px;
   left: 538px;
   top: 130px;

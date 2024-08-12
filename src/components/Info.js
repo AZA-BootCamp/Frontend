@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import '../styles/Info.css';
 import Modal from './Modal';
-import { fetchBrands, fetchAvailableCategories } from '../api/InfoApi'; // API 함수 가져오기
+import { fetchBrands, fetchAvailableCategories } from '../api/InfoApi';
 
-const Info = ({ text1, style, style2, style3, style4, setValue, setCategories }) => {
+const Info = ({ text1, style, style2, style3, style4, setValue, setCategories, value }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedBrand, setSelectedBrand] = useState('');
   const [selectedGender, setSelectedGender] = useState('');
@@ -13,29 +13,49 @@ const Info = ({ text1, style, style2, style3, style4, setValue, setCategories })
   const [options, setOptions] = useState([]);
 
   useEffect(() => {
+    // value가 전달되면 초기 상태에 반영
+    if (value) {
+      switch (text1) {
+        case '성별':
+          setSelectedGender(value);
+          break;
+        case '키':
+          setHeight(value);
+          break;
+        case '몸무게':
+          setWeight(value);
+          break;
+        case 'Brand':
+          setSelectedBrand(value);
+          break;
+        default:
+          break;
+      }
+    }
+  }, [value, text1]);
+
+  useEffect(() => {
     const loadBrands = async () => {
       const brands = await fetchBrands();
       setOptions(brands);
     };
-
     loadBrands();
   }, []);
 
   useEffect(() => {
-    if (text1 === '성별') setValue(selectedGender);
-    if (text1 === '키') setValue(height);
-    if (text1 === '몸무게') setValue(weight);
-    if (text1 === 'Brand') setValue(selectedBrand);
+    if (text1 === '성별') setValue && setValue(selectedGender);
+    if (text1 === '키') setValue && setValue(height);
+    if (text1 === '몸무게') setValue && setValue(weight);
+    if (text1 === 'Brand') setValue && setValue(selectedBrand);
   }, [selectedGender, height, weight, selectedBrand, text1, setValue]);
 
   useEffect(() => {
     const loadCategories = async () => {
       if (selectedGender && selectedBrand) {
         const categories = await fetchAvailableCategories(selectedGender, selectedBrand);
-        setCategories(categories);
+        setCategories && setCategories(categories);
       }
     };
-
     loadCategories();
   }, [selectedGender, selectedBrand, setCategories]);
 
@@ -104,7 +124,7 @@ const Info = ({ text1, style, style2, style3, style4, setValue, setCategories })
         return (
           <div className="info-units">
             <span className="info-unit" style={style4}>
-              {text1}
+              {value || text1} {/* value가 있으면 표시, 없으면 기본 텍스트 */}
             </span>
           </div>
         );

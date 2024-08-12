@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import image from '../assets/diag.png';
 import image_people from '../assets/diag_people.png';
@@ -7,8 +7,13 @@ import '../styles/DiagSimple2.css';
 import PrevBtn from '../components/PrevBtn';
 import { FaArrowRight } from 'react-icons/fa6';
 import { FaHome } from 'react-icons/fa';
+import FeedbackRender from '../components/FeedbackRender';
+import { getUserFeedback } from '../api/GetFeedbackApi';
 
 const DiagMore4 = () => {
+  const [feedbackData, setFeedbackData] = useState(null);
+  const [brand, setBrand] = useState('');
+  const [category, setCategory] = useState('');
   const navigate = useNavigate();
 
   const goto_home = () => {
@@ -46,6 +51,21 @@ const DiagMore4 = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const fetchFeedback = async () => {
+      try {
+        const { feedback, brand, category } = await getUserFeedback(); // 구조 분해 할당으로 데이터 가져오기
+        setFeedbackData(feedback); // 피드백 데이터를 상태에 저장
+        setBrand(brand); // 브랜드 데이터를 상태에 저장
+        setCategory(category); // 카테고리 데이터를 상태에 저장
+      } catch (error) {
+        console.error('Error fetching feedback:', error);
+      }
+    };
+
+    fetchFeedback(); // 컴포넌트가 마운트될 때 피드백 데이터를 가져옴
+  }, []);
+
   return (
     <div className="diagsimple-group fade-element">
       <div className="content fade-element">
@@ -63,6 +83,7 @@ const DiagMore4 = () => {
       <div className="info-container">
         <Info
           text1="추천 브랜드"
+          value={brand} // 브랜드 데이터 전달
           style={{ width: '222px', height: '50px' }}
           style2={{ width: '440px', height: '50px' }}
           style3={{ marginLeft: '40px' }}
@@ -70,6 +91,7 @@ const DiagMore4 = () => {
         />
         <Info
           text1="추천 의류"
+          value={category} // 카테고리 데이터 전달
           style={{ width: '222px', height: '50px' }}
           style3={{ marginLeft: '40px' }}
           style4={{ marginLeft: '85px' }}
@@ -85,7 +107,11 @@ const DiagMore4 = () => {
         <p className="diagsimple-title_text">정밀 진단</p>
         <div className="diagsimple-title_box"></div>
       </div>
-      <div className="show_clothes"></div>
+      <div className="review-box">
+        <p className="review-title">이 옷에 대해 다른 사람들은</p>
+        <div className="review-container">{feedbackData && <FeedbackRender feedbackData={feedbackData} />}</div>
+        <div className="review-back"></div>
+      </div>
       <div className="goto-home">
         <button className="goto-home_box" onClick={goto_home}>
           <FaHome className="home_icon" />

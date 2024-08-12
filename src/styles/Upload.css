@@ -67,6 +67,21 @@
   color: #515151;
 }
 
+.upload-text1 {
+  position: absolute;
+  width: 409px;
+  height: 39px;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Merriweather', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 24px;
+  color: #515151;
+}
+
 .file-list {
   position: absolute;
   top: 75%;
