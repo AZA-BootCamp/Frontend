@@ -9,8 +9,10 @@ import GuideUploadBtn from '../components/GuideUploadBtn';
 import Loading from '../components/Loading';
 import FileState from '../components/FileState';
 import Done from '../components/Done';
+import GuideModal from '../components/GuideModal';
+import LoadingModal from '../components/LoadingModal'; // LoadingModal 가져오기
 import { uploadFiles, listFiles, deleteFile } from '../api/UploadApi';
-import { predict } from '../api/PredictApi'; // Import the predict API function
+import { predict } from '../api/PredictApi';
 import { useNavigate } from 'react-router';
 
 const DiagMore2 = () => {
@@ -19,6 +21,8 @@ const DiagMore2 = () => {
   const [uploadProgress, setUploadProgress] = useState([]);
   const [uploadComplete, setUploadComplete] = useState(false);
   const [uploadedFiles, setUploadedFiles] = useState([]);
+  const [isGuideModalOpen, setGuideModalOpen] = useState(true);
+  const [isLoading, setLoading] = useState(false); // LoadingModal 상태 관리
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -74,12 +78,19 @@ const DiagMore2 = () => {
   };
 
   const handleNextClick = async () => {
+    setLoading(true); // LoadingModal을 표시
+    console.log('Loading started'); // 디버깅용 로그 추가
     try {
       const result = await predict();
       console.log('Prediction result:', result);
-      navigate('/diagMore3'); // navigate to the next page after prediction
+      // setTimeout을 사용해 페이지 전환을 약간 지연시켜 LoadingModal이 표시될 시간을 확보합니다.
+      setTimeout(() => {
+        setLoading(false); // 예측이 완료되면 LoadingModal을 닫음
+        navigate('/diagMore3'); // 다음 페이지로 이동
+      }, 1000); // 1초 지연 (필요시 조정 가능)
     } catch (error) {
       console.error('Error during prediction:', error);
+      setLoading(false); // 에러 발생 시에도 LoadingModal을 닫음
     }
   };
 
@@ -149,6 +160,10 @@ const DiagMore2 = () => {
         }}
         onClick={handleNextClick} // Trigger prediction on next click
       />
+      {/* GuideModal 컴포넌트 추가 */}
+      <GuideModal isOpen={isGuideModalOpen} onClose={() => setGuideModalOpen(false)} />
+      {/* LoadingModal 컴포넌트 추가 */}
+      <LoadingModal isOpen={isLoading} onClose={() => setLoading(false)} />
     </div>
   );
 };

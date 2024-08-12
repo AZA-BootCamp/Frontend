@@ -12,6 +12,8 @@ import { getUserFeedback } from '../api/GetFeedbackApi';
 
 const DiagSimple2 = () => {
   const [feedbackData, setFeedbackData] = useState(null);
+  const [brand, setBrand] = useState('');
+  const [category, setCategory] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -43,8 +45,10 @@ const DiagSimple2 = () => {
   useEffect(() => {
     const fetchFeedback = async () => {
       try {
-        const data = await getUserFeedback(); // 저장된 사용자 데이터를 기반으로 피드백 데이터 요청
-        setFeedbackData(data); // 상태에 저장
+        const { feedback, brand, category } = await getUserFeedback(); // 구조 분해 할당으로 데이터 가져오기
+        setFeedbackData(feedback); // 피드백 데이터를 상태에 저장
+        setBrand(brand); // 브랜드 데이터를 상태에 저장
+        setCategory(category); // 카테고리 데이터를 상태에 저장
       } catch (error) {
         console.error('Error fetching feedback:', error);
       }
@@ -78,6 +82,7 @@ const DiagSimple2 = () => {
       <div className="info-container">
         <Info
           text1="추천 브랜드"
+          value={brand} // 브랜드 데이터 전달
           style={{ width: '222px', height: '50px' }}
           style2={{ width: '440px', height: '50px' }}
           style3={{ marginLeft: '40px' }}
@@ -85,6 +90,7 @@ const DiagSimple2 = () => {
         />
         <Info
           text1="추천 의류"
+          value={category} // 카테고리 데이터 전달
           style={{ width: '222px', height: '50px' }}
           style3={{ marginLeft: '40px' }}
           style4={{ marginLeft: '85px' }}

@@ -1,14 +1,12 @@
-// GetFeedback.js
 const BASE_URL = 'http://0.0.0.0:8000';
 
-export const getUserFeedback = async (userData) => {
+export const getUserFeedback = async () => {
   try {
     const response = await fetch(`${BASE_URL}/get-user-feedback`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(userData), // userData는 JSON 형식이어야 합니다.
     });
 
     if (!response.ok) {
@@ -16,7 +14,11 @@ export const getUserFeedback = async (userData) => {
     }
 
     const data = await response.json();
-    return data;
+    return {
+      feedback: data.feedback, // 피드백 데이터
+      brand: data.brand, // 브랜드 데이터
+      category: data.category, // 카테고리 데이터
+    };
   } catch (error) {
     console.error('Error fetching user feedback:', error);
     throw error;
