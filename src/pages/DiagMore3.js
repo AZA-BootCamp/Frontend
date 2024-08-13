@@ -64,7 +64,7 @@ const DiagMore3 = () => {
 
   return (
     <div className="diagsimple-group fade-element">
-      <div className="content">
+      <div className="content fade-element">
         <img src={image} alt="Background" className="diagsimple-group_5" />
         <div className="diagsimple-group_1">
           <div className="diagsmple-group_4"></div>
