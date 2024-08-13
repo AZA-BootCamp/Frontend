@@ -1,0 +1,40 @@
+/* Rectangle 7125 */
+.qbox {
+  position: relative;
+  width: 600px;
+  height: 55px;
+
+  /* left: calc(50% - 600px / 2 - 413px);
+  top: calc(50% - 60px / 2 - 209px); */
+
+  background: #d6d4f0b3;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  z-index: 11;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* 해외 쇼핑몰 의류가 핏이 안 맞는 경우가 있으셨나요? */
+.qtext {
+  position: absolute;
+  width: 600px;
+  height: 60px;
+  /* left: 247px;
+  top: 301px; */
+
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  z-index: 12;
+
+  color: #000000;
+}

@@ -1,0 +1,75 @@
+/* more */
+.more-frame {
+  position: relative;
+  width: 1920px;
+  height: 821px;
+
+  background: #ffffff;
+}
+
+/* DALL·E 2024-07-19 19.01.37 - another different 2D rendering of abstract shapes made of transparent material with blue and purple hues, with smooth and fluid curves, similar to the 1 */
+.more-backimage {
+  position: absolute;
+  width: 2283px;
+  height: 821px;
+  top: 135px;
+  background-image: url("../assets/main.png");
+  z-index: 1;
+}
+
+/* Rectangle 7136 */
+.more-bigbox {
+  position: relative;
+  width: 1260px;
+  height: 700px;
+  left: 350px;
+  top: 60px;
+  padding-top: 60px;
+  padding-left: 150px;
+  padding-right: 150px;
+  background: #ffffff;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Rectangle 7138 */
+.more-teambox {
+  position: absolute;
+  width: 157px;
+  height: 37px;
+  left: 245px;
+  top: 25px;
+  z-index: 2;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Team AZA */
+.more-teamtext {
+  position: absolute;
+  width: 126px;
+  height: 24px;
+  /* left: 334px;
+  top: 256px; */
+  z-index: 5;
+
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  color: #000000;
+}
