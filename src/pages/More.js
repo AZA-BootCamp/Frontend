@@ -16,7 +16,44 @@ const More = () => {
           pgit={"github"}
           pschool={"인하대학교"}
           pmajor={"전자공학과"}
-          phone={"010-1234-5678"}
+          pphone={"010-1234-5678"}
+          pblog={"블로그 모름"}
+        />
+        <Person
+          pphoto={king}
+          pname={"김태우"}
+          pgit={"github"}
+          pschool={"인하대학교"}
+          pmajor={"전자공학과"}
+          pphone={"010-1234-5678"}
+          pblog={"블로그 모름"}
+        />
+        <Person
+          pphoto={king}
+          pname={"김태우"}
+          pgit={"github"}
+          pschool={"인하대학교"}
+          pmajor={"전자공학과"}
+          pphone={"010-1234-5678"}
+          pblog={"블로그 모름"}
+        />
+        <br></br>
+        <Person
+          pphoto={king}
+          pname={"김태우"}
+          pgit={"github"}
+          pschool={"인하대학교"}
+          pmajor={"전자공학과"}
+          pphone={"010-1234-5678"}
+          pblog={"블로그 모름"}
+        />
+        <Person
+          pphoto={king}
+          pname={"김태우"}
+          pgit={"github"}
+          pschool={"인하대학교"}
+          pmajor={"전자공학과"}
+          pphone={"010-1234-5678"}
           pblog={"블로그 모름"}
         />
       </div>
