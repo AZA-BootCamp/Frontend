@@ -40,14 +40,15 @@ const DiagMore4 = () => {
 
     // 감시할 요소들 선택
     const elements = document.querySelectorAll('.fade-element');
-    elements.forEach((element) => {
-      observer.observe(element);
-    });
+    elements.forEach((element) => observer.observe(element));
 
     return () => {
       elements.forEach((element) => {
-        observer.unobserve(element);
+        if (observer) {
+          observer.unobserve(element);
+        }
       });
+      observer.disconnect(); // 컴포넌트 언마운트 시 observer 해제
     };
   }, []);
 
@@ -83,7 +84,7 @@ const DiagMore4 = () => {
       <div className="info-container">
         <Info
           text1="추천 브랜드"
-          value={brand} // 브랜드 데이터 전달
+          value={brand || '로딩 중...'} // 브랜드 데이터 전달 (없으면 기본값 표시)
           style={{ width: '222px', height: '50px' }}
           style2={{ width: '440px', height: '50px' }}
           style3={{ marginLeft: '40px' }}
@@ -91,13 +92,14 @@ const DiagMore4 = () => {
         />
         <Info
           text1="추천 의류"
-          value={category} // 카테고리 데이터 전달
+          value={category || '로딩 중...'} // 카테고리 데이터 전달 (없으면 기본값 표시)
           style={{ width: '222px', height: '50px' }}
           style3={{ marginLeft: '40px' }}
           style4={{ marginLeft: '85px' }}
         />
         <Info
           text1="추천 사이즈"
+          value={'로딩 중...'} // 사이즈 데이터 전달 (임시 기본값)
           style={{ width: '222px', height: '50px' }}
           style3={{ marginLeft: '40px' }}
           style4={{ marginLeft: '85px' }}
