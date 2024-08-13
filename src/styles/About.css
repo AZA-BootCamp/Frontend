@@ -37,7 +37,7 @@
   height: 821px;
   /* left: calc(50% - 2283px / 2 + 0.5px); */
   top: 135px;
-  background-image: url("../assets/main.png");
+  background-image: url('../assets/main.png');
   z-index: 1;
 }
 
@@ -170,7 +170,7 @@ Group 1000003566 */
   left: 247px;
   top: 425px;
 
-  font-family: "Playfair Display";
+  font-family: 'Playfair Display';
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -215,7 +215,7 @@ Group 1000003566 */
   left: 246px;
   top: 553px;
 
-  font-family: "Playfair Display";
+  font-family: 'Playfair Display';
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -245,7 +245,7 @@ logo바로 밑에 존재하는 그룹*/
   left: 1220px;
   top: 235px;
 
-  font-family: "Merriweather";
+  font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
   font-size: 48px;
@@ -302,10 +302,10 @@ benefit 2번째 원*/
   position: absolute;
   width: 200px;
   height: 150px;
-  left: 1325px;
+  left: 1329.5px;
   top: 550px;
 
-  font-family: "Merriweather";
+  font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
@@ -348,11 +348,11 @@ benefit 2번째 원*/
   position: absolute;
   width: 200px;
   height: 150px;
-  left: 1055px;
+  left: 1065px;
   top: 550px;
   z-index: 8;
 
-  font-family: "Merriweather";
+  font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
@@ -393,10 +393,10 @@ benefit 2번째 원*/
   position: absolute;
   width: 200px;
   height: 150px;
-  left: 1564px;
+  left: 1576.5px;
   top: 560px;
   z-index: 8;
-  font-family: "Merriweather";
+  font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
@@ -445,7 +445,7 @@ benefit 2번째 원*/
   left: calc(50% - 137px / 2 - 591.5px);
   top: calc(50% - 51px / 2 - 426.5px);
 
-  font-family: "Merriweather";
+  font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
   font-size: 32px;

@@ -1,3 +1,25 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* 아래에서 위로 올라오는 효과 */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 요소가 보이기 시작할 때 적용할 클래스 */
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+  opacity: 1;
+}
+
+/* 기본 상태에서는 요소가 보이지 않도록 설정 */
+.fade-element {
+  opacity: 0;
+}
+
 /* Group 1000003556 */
 .logo_box {
   z-index: 10;

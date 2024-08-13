@@ -5,6 +5,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const ObjViewer = ({ top = '0px', left = '0px' }) => {
   const mountRef = useRef(null);
+  const rendererRef = useRef(null);
 
   useEffect(() => {
     // Scene, camera, renderer 세팅
@@ -13,12 +14,15 @@ const ObjViewer = ({ top = '0px', left = '0px' }) => {
     // 카메라와 렌더러 설정
     const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true }); // alpha: true로 배경을 투명하게 설정
+    rendererRef.current = renderer; // renderer를 ref에 저장
 
     renderer.setSize(500, 500);
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setClearColor(0x000000, 0); // 배경을 투명하게 설정
 
-    mountRef.current.appendChild(renderer.domElement);
+    if (mountRef.current) {
+      mountRef.current.appendChild(renderer.domElement);
+    }
 
     // 조명 추가
     const light = new THREE.DirectionalLight(0xffffff, 1);
@@ -67,7 +71,10 @@ const ObjViewer = ({ top = '0px', left = '0px' }) => {
     // Cleanup
     return () => {
       controls.dispose(); // OrbitControls 리소스 해제
-      mountRef.current.removeChild(renderer.domElement);
+      if (rendererRef.current && mountRef.current) {
+        mountRef.current.removeChild(rendererRef.current.domElement); // DOM에서 안전하게 제거
+      }
+      rendererRef.current.dispose();
     };
   }, []);
 
