@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Person.css";
 
-const Person = ({ pphoto, pname, pgit, pschool, pmajor, pphone, pblog }) => {
+const Person = ({ pphoto, pname, pgit, pschool, pmajor, pmbti, pemail }) => {
   return (
     <div className="more-pbox">
       <div className="more-teamimage">
@@ -15,8 +15,8 @@ const Person = ({ pphoto, pname, pgit, pschool, pmajor, pphone, pblog }) => {
       </div>
       <div>
         <p className="more-textright1">{pgit}</p>
-        <p className="more-textright2">{pblog}</p>
-        <p className="more-textright3">{pphone}</p>
+        <p className="more-textright2">{pemail}</p>
+        <p className="more-textright3">{pmbti}</p>
       </div>
     </div>
   );
