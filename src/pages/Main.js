@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
-import image from '/Users/heejin/Downloads/Frontend/src/assets/main.png';
-import '../styles/Main.css';
-import Footer from '../components/Footer';
-import DiagBtn from '../components/DiagBtn';
-import AZA from '../components/AZA';
-import Problem from '../components/Problem';
-import { FaArrowDown } from 'react-icons/fa';
+import React, { useEffect } from "react";
+import image from "../assets/main.png";
+import "../styles/Main.css";
+import Footer from "../components/Footer";
+import DiagBtn from "../components/DiagBtn";
+import AZA from "../components/AZA";
+import Problem from "../components/Problem";
+import { FaArrowDown } from "react-icons/fa";
 
 const Main = () => {
   useEffect(() => {
@@ -13,11 +13,11 @@ const Main = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.remove('fade-out');
-            entry.target.classList.add('fade-in');
+            entry.target.classList.remove("fade-out");
+            entry.target.classList.add("fade-in");
           } else {
-            entry.target.classList.remove('fade-in');
-            entry.target.classList.add('fade-out');
+            entry.target.classList.remove("fade-in");
+            entry.target.classList.add("fade-out");
           }
         });
       },
@@ -27,7 +27,7 @@ const Main = () => {
     );
 
     // 감시할 요소들 선택
-    const elements = document.querySelectorAll('.fade-element');
+    const elements = document.querySelectorAll(".fade-element");
     elements.forEach((element) => {
       observer.observe(element);
     });
@@ -41,7 +41,11 @@ const Main = () => {
 
   return (
     <div>
-      <img src={image} alt="Background" className="background_img fade-element" />
+      <img
+        src={image}
+        alt="Background"
+        className="background_img fade-element"
+      />
       <div className="textBox1 fade-element">
         <p className="text1">AI 기반 맞춤형 의류 추천 서비스</p>
       </div>
@@ -51,14 +55,28 @@ const Main = () => {
         <p className="text2_3">A 아웃핏</p>
       </div>
       <div className="buttons-container fade-element">
-        <DiagBtn text1="간단 진단하기" text2="키, 몸무게만으로" navigateTo="/diagSimple" />
-        <DiagBtn text1="정밀 진단하기" text2="사진으로" navigateTo="/diagMore" />
+        <DiagBtn
+          text1="간단 진단하기"
+          text2="키, 몸무게만으로"
+          navigateTo="/diagSimple"
+        />
+        <DiagBtn
+          text1="정밀 진단하기"
+          text2="사진으로"
+          navigateTo="/diagMore"
+        />
       </div>
       <div className="fade-element">
         <AZA
-          style={{ position: 'absolute', width: '411px', height: '150px', left: '386px', top: '60px' }}
-          style1={{ width: '300px', height: '150px', borderRadius: '70%' }}
-          style2={{ fontSize: '64px', lineHeight: '80px' }}
+          style={{
+            position: "absolute",
+            width: "411px",
+            height: "150px",
+            left: "386px",
+            top: "60px",
+          }}
+          style1={{ width: "300px", height: "150px", borderRadius: "70%" }}
+          style2={{ fontSize: "64px", lineHeight: "80px" }}
         />
       </div>
       <div className="problem-container fade-element">
