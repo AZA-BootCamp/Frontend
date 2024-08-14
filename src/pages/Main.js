@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import image from '/Users/heejin/Downloads/Frontend/src/assets/main.png';
+import image from '../assets/main.png';
 import '../styles/Main.css';
 import Footer from '../components/Footer';
 import DiagBtn from '../components/DiagBtn';
