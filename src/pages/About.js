@@ -1,31 +1,50 @@
-import React from "react";
-import image from "../assets/main.png";
-import "../styles/About.css";
-import AZA from "../components/AZA";
-import Question from "../components/Question";
-import Arrow from "../assets/arrow.svg";
-import Logo from "../components/Logo";
+import React, { useEffect } from 'react';
+import image from '../assets/main.png';
+import '../styles/About.css';
+import AZA from '../components/AZA';
+import Question from '../components/Question';
+import Arrow from '../assets/arrow.svg';
+import Logo from '../components/Logo';
 
 const About = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    const elements = document.querySelectorAll('.fade-element');
+    elements.forEach((element) => {
+      observer.observe(element);
+    });
+
+    return () => {
+      elements.forEach((element) => {
+        observer.unobserve(element);
+      });
+    };
+  }, []);
+
   return (
     <div>
-      <div>
+      <div className="fade-element">
         <div className="aboutAZA-backimage">
           <div className="containerq">
-            <Question
-              text={"해외 쇼핑몰 의류가 핏이 안 맞는 경우가 있으셨나요?"}
-            />
-            <Question
-              text={"해외 쇼핑몰사이트의 사이즈 가이드가 불편하셨나요?"}
-            />
-            <Question text={"번거로운 반품 및 교환을 줄이고 싶으신가요?"} />
+            <Question text={'해외 쇼핑몰 의류가 핏이 안 맞는 경우가 있으셨나요?'} />
+            <Question text={'해외 쇼핑몰사이트의 사이즈 가이드가 불편하셨나요?'} />
+            <Question text={'번거로운 반품 및 교환을 줄이고 싶으신가요?'} />
           </div>
-          <img
-            src={Arrow}
-            style={{ position: "absolute", top: "223px", left: "1000px" }}
-          />
+          <img src={Arrow} style={{ position: 'absolute', top: '223px', left: '1000px' }} />
           <div>
-            <Logo logo={"AZA"} />
+            <Logo logo={'AZA'} />
           </div>
           <div>
             <p className="aboutAZA-logobottomtext">

@@ -25,29 +25,11 @@ const DiagMore3 = () => {
 
     fetchMeasurements();
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-      }
-    );
-
+    // 페이지가 로드되자마자 fade-in 클래스 추가
     const elements = document.querySelectorAll('.fade-element');
     elements.forEach((element) => {
-      observer.observe(element);
+      element.classList.add('fade-in');
     });
-
-    return () => {
-      elements.forEach((element) => {
-        observer.unobserve(element);
-      });
-    };
   }, []);
 
   if (!measurements) {
@@ -63,8 +45,8 @@ const DiagMore3 = () => {
   };
 
   return (
-    <div className="diagsimple-group fade-element">
-      <div className="content">
+    <div className="diagsimple-group fade-element fade-in">
+      <div className="content fade-element fade-in">
         <img src={image} alt="Background" className="diagsimple-group_5" />
         <div className="diagsimple-group_1">
           <div className="diagsmple-group_4"></div>

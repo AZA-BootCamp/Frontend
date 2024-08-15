@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
-import image from "../assets/main.png";
-import "../styles/Main.css";
-import Footer from "../components/Footer";
-import DiagBtn from "../components/DiagBtn";
-import AZA from "../components/AZA";
-import Problem from "../components/Problem";
-import { FaArrowDown } from "react-icons/fa";
+import React, { useEffect } from 'react';
+import image from '../assets/main.png';
+import '../styles/Main.css';
+import Footer from '../components/Footer';
+import DiagBtn from '../components/DiagBtn';
+import AZA from '../components/AZA';
+import Problem from '../components/Problem';
+import { FaArrowDown } from 'react-icons/fa';
 
 const Main = () => {
   useEffect(() => {
