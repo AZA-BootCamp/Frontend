@@ -49,3 +49,17 @@ export const fetchAvailableCategories = async (gender, brand) => {
     return [];
   }
 };
+
+export const fetchSize = async () => {
+  try {
+    const response = await fetch(`${BASE_URL}/get_predict_size`);
+    if (!response.ok) {
+      throw new Error('Failed to fetch brands');
+    }
+    const size = await response.json();
+    return size;
+  } catch (error) {
+    console.error('Error fetching brands:', error);
+    return [];
+  }
+};

@@ -35,7 +35,7 @@ const ChattingBot = () => {
     );
 
     // 감시할 요소들 선택
-    const elements = document.querySelectorAll('.fade-element');
+    const elements = document.querySelectorAll('.fade-elemet');
     elements.forEach((element) => {
       observer.observe(element);
     });
@@ -48,7 +48,7 @@ const ChattingBot = () => {
   }, []);
 
   return (
-    <div className="fade-element">
+    <div className="">
       <img src={image} alt="Background" className="chat-background_img" />
       <div className="chat-line"></div>
       <div className="chatbot-container">

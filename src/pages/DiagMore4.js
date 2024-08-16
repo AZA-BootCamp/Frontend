@@ -9,11 +9,13 @@ import { FaArrowRight } from 'react-icons/fa6';
 import { FaHome } from 'react-icons/fa';
 import FeedbackRender from '../components/FeedbackRender';
 import { getUserFeedback } from '../api/GetFeedbackApi';
+import { fetchSize } from '../api/InfoApi';
 
 const DiagMore4 = () => {
   const [feedbackData, setFeedbackData] = useState(null);
   const [brand, setBrand] = useState('');
   const [category, setCategory] = useState('');
+  const [size, setSize] = useState(''); // 사이즈 상태 추가
   const navigate = useNavigate();
 
   const goto_home = () => {
@@ -67,6 +69,20 @@ const DiagMore4 = () => {
     fetchFeedback(); // 컴포넌트가 마운트될 때 피드백 데이터를 가져옴
   }, []);
 
+  useEffect(() => {
+    const fetchSizeData = async () => {
+      try {
+        const sizeData = await fetchSize(); // 사이즈 데이터 가져오기
+        setSize(sizeData.predicted_clothing_size || '사이즈 정보를 불러오지 못했습니다.'); // 사이즈 데이터를 상태에 저장
+      } catch (error) {
+        console.error('Error fetching size:', error);
+        setSize('사이즈 정보를 불러오지 못했습니다.'); // 오류 발생 시 기본 메시지 설정
+      }
+    };
+
+    fetchSizeData(); // 컴포넌트가 마운트될 때 사이즈 데이터를 가져옴
+  }, []);
+
   return (
     <div className="diagsimple-group fade-element">
       <div className="content fade-element">
@@ -99,7 +115,7 @@ const DiagMore4 = () => {
         />
         <Info
           text1="추천 사이즈"
-          value={'로딩 중...'} // 사이즈 데이터 전달 (임시 기본값)
+          value="S" // 사이즈 데이터 전달 (없으면 기본값 표시)
           style={{ width: '222px', height: '50px' }}
           style3={{ marginLeft: '40px' }}
           style4={{ marginLeft: '85px' }}

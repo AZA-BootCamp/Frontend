@@ -97,6 +97,7 @@ const DiagSimple2 = () => {
         />
         <Info
           text1="추천 사이즈"
+          value="S"
           style={{ width: '222px', height: '50px' }}
           style3={{ marginLeft: '40px' }}
           style4={{ marginLeft: '85px' }}

@@ -10,23 +10,24 @@
 /* DALL·E 2024-07-19 19.01.37 - another different 2D rendering of abstract shapes made of transparent material with blue and purple hues, with smooth and fluid curves, similar to the 1 */
 .more-backimage {
   position: absolute;
-  width: 2283px;
+  width: 1920px;
   height: 821px;
   top: 135px;
-  background-image: url("../assets/main.png");
+  background-image: url('../assets/main.png');
   z-index: 1;
 }
 
 /* Rectangle 7136 */
 .more-bigbox {
   position: relative;
-  width: 1260px;
-  height: 700px;
+  width: 960px;
+  height: 650px;
   left: 350px;
   top: 60px;
+  margin-right: -100px;
   padding-top: 60px;
-  padding-left: 150px;
-  padding-right: 150px;
+  padding-left: 100px;
+  padding-right: 130px;
   background: #ffffff;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
@@ -62,7 +63,7 @@
   top: 256px; */
   z-index: 5;
 
-  font-family: "Merriweather";
+  font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
