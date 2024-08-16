@@ -1,13 +1,13 @@
-import React from "react";
-import "../styles/Person.css";
+import React from 'react';
+import '../styles/Person.css';
 
 const Person = ({ pphoto, pname, pgit, pschool, pmajor, pmbti, pemail }) => {
   return (
     <div className="more-pbox">
       <div className="more-teamimage">
-        <img src={pphoto} style={{ width: "201px", height: "172px" }}></img>
+        <img src={pphoto} style={{ width: '201px', height: '172px' }}></img>
       </div>
-      <div className="more-teampartition"></div>
+      {/*<div className="more-teampartition"></div>*/}
       <div>
         <p className="more-textleft1">{pname}</p>
         <p className="more-textleft2">{pschool}</p>

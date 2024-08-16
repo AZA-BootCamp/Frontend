@@ -21,8 +21,8 @@
   display: flex;
   /* justify-content: center; */
   position: relative;
-  width: 340px;
-  height: 288px;
+  width: 220px;
+  height: 168px;
 
   /* left: 368px;
   top: 354px; */
@@ -31,7 +31,8 @@
   background: #f9f9f9;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  margin-right: 80px;
+  padding-right: 80px;
+  padding-left: 15px;
 }
 
 /* Line 3 */
@@ -75,7 +76,7 @@
   margin: 10px;
   z-index: 5;
 
-  font-family: "Merriweather";
+  font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -95,7 +96,7 @@
   margin: 10px;
   z-index: 5;
 
-  font-family: "Merriweather";
+  font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -115,7 +116,7 @@
   margin: 10px;
   z-index: 5;
 
-  font-family: "Merriweather";
+  font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -136,7 +137,7 @@
   z-index: 5;
   margin: 10px;
 
-  font-family: "Merriweather";
+  font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -156,7 +157,7 @@
   /* align-self: flex-start; */
   z-index: 5;
   margin: 10px;
-  font-family: "Merriweather";
+  font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -176,7 +177,7 @@
   /* align-self: flex-start; */
   z-index: 5;
   margin: 10px;
-  font-family: "Merriweather";
+  font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -195,7 +196,7 @@
   /* align-self: flex-start; */
   z-index: 5;
   margin: 10px;
-  font-family: "Merriweather";
+  font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -210,7 +211,7 @@
   position: absolute;
   width: 201px;
   height: 172px;
-  left: 70px;
+  left: 50px;
 
   z-index: 5;
 }
