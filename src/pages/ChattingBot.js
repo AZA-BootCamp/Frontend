@@ -1,25 +1,38 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import image from '../assets/main.png';
 import '../styles/ChattingBot.css';
 import { IoIosSend } from 'react-icons/io';
-import { LuBaby } from 'react-icons/lu'; // AZANG icon 후보
+import { LuBaby } from 'react-icons/lu';
+import { sendMessageToBot } from '../api/ChatApi'; // 분리된 API 요청 함수 임포트
 
 const ChattingBot = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
+  const messagesEndRef = useRef(null); // 스크롤 조정용 ref 생성
 
   const handleSend = async () => {
     if (input.trim() === '') return;
 
+    // 사용자 메시지를 추가합니다.
     const userMessage = { role: 'user', content: input };
-    setMessages([...messages, userMessage]);
+    setMessages((prevMessages) => [...prevMessages, userMessage]);
 
-    //const botMessageContent = await sendMessage(input);
-    //const botMessage = { role: 'bot', content: botMessageContent };
-    //setMessages([...messages, userMessage, botMessage]);
+    // 봇의 응답을 받아옵니다.
+    const botMessageContent = await sendMessageToBot(input); // API 요청 함수 호출
 
+    // 봇의 응답을 추가합니다.
+    const botMessage = { role: 'bot', content: botMessageContent };
+    setMessages((prevMessages) => [...prevMessages, botMessage]);
+
+    // 입력 필드를 비웁니다.
     setInput('');
   };
+
+  // messages 업데이트 시 스크롤을 하단으로 이동
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -35,7 +48,7 @@ const ChattingBot = () => {
     );
 
     // 감시할 요소들 선택
-    const elements = document.querySelectorAll('.fade-elemet');
+    const elements = document.querySelectorAll('.fade-element'); // 오타 수정됨
     elements.forEach((element) => {
       observer.observe(element);
     });
@@ -54,10 +67,12 @@ const ChattingBot = () => {
       <div className="chatbot-container">
         <div className="messages">
           {messages.map((msg, index) => (
-            <div key={index} className={`message ${msg.role}`}>
-              {msg.content}
+            <div key={index} className={`message-container ${msg.role}`}>
+              {msg.role === 'bot' && <LuBaby className="bot-icon" />}
+              <div className={`message ${msg.role}`}>{msg.content}</div>
             </div>
           ))}
+          <div ref={messagesEndRef} /> {/* 메시지 끝에 ref 추가 */}
         </div>
         <div className="input-container">
           <div className="input-box">

@@ -51,6 +51,10 @@
   padding: 10px;
   border-radius: 5px;
 }
+.message-container {
+  display: flex;
+  align-items: center;
+}
 
 .message.user {
   /* Rectangle 7135 */
@@ -58,10 +62,11 @@
   box-sizing: border-box;
 
   position: relative;
-  width: 600px;
-  height: 100px;
-  left: 650px;
+  width: auto;
+  height: auto; /* 자동으로 높이 조절 */
+  right: 40px; /* 오른쪽에 붙이기 */
   margin-top: 50px;
+  margin-left: auto; /* 자동으로 왼쪽 여백 생성 */
 
   background: #fcf4ff;
   border: 3px solid #f5eff9;
@@ -72,8 +77,30 @@
 
 /* 수정 필요 */
 .message.bot {
-  background-color: #f1f1f1;
+  box-sizing: border-box;
+
+  position: relative;
+  width: 600px;
+  height: auto; /* 자동으로 높이 조절 */
+  left: 15px;
+  margin-top: 0px;
+
+  border: 3px solid #f5eff9;
+  border-radius: 20px;
+
+  background-color: #fcf4ff;
   align-self: flex-start;
+  margin-bottom: 50px;
+  display: flex; /* Flexbox 사용 */
+  align-items: center; /* 아이템을 수직 정렬 */
+}
+
+.bot-icon {
+  position: relative;
+  top: -40px;
+  left: 10px;
+  margin-right: 8px; /* 아이콘과 텍스트 사이의 간격 */
+  font-size: 2.5em;
 }
 
 .input-container {
