@@ -8,9 +8,20 @@ export const sendMessageToBot = async (message) => {
     });
 
     const data = await response.json();
-    return data.answer; // `answer`는 FastAPI에서 반환하는 키입니다.
+    return data;
   } catch (error) {
     console.error('Error sending message:', error);
-    return 'Error: 응답을 받을 수 없습니다.';
+    return { answer: 'Error: 응답을 받을 수 없습니다.' };
+  }
+};
+
+export const getInitialBotMessage = async () => {
+  try {
+    const response = await fetch('http://localhost:8000/chatbot_hi');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching initial message:', error);
+    return { message: 'Error: 초기 메시지를 불러올 수 없습니다.' };
   }
 };
