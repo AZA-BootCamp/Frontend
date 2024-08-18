@@ -90,7 +90,8 @@
 
   background-color: #fcf4ff;
   align-self: flex-start;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 40px;
   display: flex; /* Flexbox 사용 */
   align-items: center; /* 아이템을 수직 정렬 */
 }

@@ -1,30 +1,60 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import image from '../assets/main.png';
 import '../styles/ChattingBot.css';
 import { IoIosSend } from 'react-icons/io';
 import { LuBaby } from 'react-icons/lu';
-import { sendMessageToBot } from '../api/ChatApi'; // 분리된 API 요청 함수 임포트
+import { sendMessageToBot, getInitialBotMessage } from '../api/ChatApi'; // 분리된 API 요청 함수 임포트
 
 const ChattingBot = () => {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState(() => {
+    // 초기 상태를 비동기 함수 호출로 설정
+    const loadInitialMessage = async () => {
+      const initialBotResponse = await getInitialBotMessage();
+      return [{ role: 'bot', content: initialBotResponse.trim() }];
+    };
+
+    // 비동기 함수 호출하여 초기 메시지 설정
+    loadInitialMessage().then((initialMessages) => {
+      setMessages(initialMessages);
+    });
+
+    return []; // 초기에는 빈 배열로 설정
+  });
   const [input, setInput] = useState('');
   const messagesEndRef = useRef(null); // 스크롤 조정용 ref 생성
 
   const handleSend = async () => {
     if (input.trim() === '') return;
 
-    // 사용자 메시지를 추가합니다.
     const userMessage = { role: 'user', content: input };
     setMessages((prevMessages) => [...prevMessages, userMessage]);
 
-    // 봇의 응답을 받아옵니다.
-    const botMessageContent = await sendMessageToBot(input); // API 요청 함수 호출
+    const botResponse = await sendMessageToBot(input);
 
-    // 봇의 응답을 추가합니다.
+    let botMessageContent = '';
+
+    if (typeof botResponse === 'object' && botResponse !== null) {
+      if (botResponse.answer.products) {
+        botResponse.answer.products.forEach((product) => {
+          const brandInfo = product.brand ? `(${product.brand})` : '';
+          botMessageContent += `• ${product.name} ${brandInfo} : ${product.description} - ${product.price}원 💰\n`;
+        });
+      }
+
+      if (botResponse.answer.message) {
+        botMessageContent += `\n${botResponse.answer.message}`;
+      }
+
+      if (typeof botResponse.answer === 'string') {
+        botMessageContent += botResponse.answer;
+      }
+    } else {
+      botMessageContent = 'No response';
+    }
+
     const botMessage = { role: 'bot', content: botMessageContent };
     setMessages((prevMessages) => [...prevMessages, botMessage]);
 
-    // 입력 필드를 비웁니다.
     setInput('');
   };
 
@@ -47,8 +77,7 @@ const ChattingBot = () => {
       }
     );
 
-    // 감시할 요소들 선택
-    const elements = document.querySelectorAll('.fade-element'); // 오타 수정됨
+    const elements = document.querySelectorAll('.fade-element');
     elements.forEach((element) => {
       observer.observe(element);
     });
@@ -61,7 +90,7 @@ const ChattingBot = () => {
   }, []);
 
   return (
-    <div className="">
+    <div className="fade-element">
       <img src={image} alt="Background" className="chat-background_img" />
       <div className="chat-line"></div>
       <div className="chatbot-container">
@@ -69,7 +98,14 @@ const ChattingBot = () => {
           {messages.map((msg, index) => (
             <div key={index} className={`message-container ${msg.role}`}>
               {msg.role === 'bot' && <LuBaby className="bot-icon" />}
-              <div className={`message ${msg.role}`}>{msg.content}</div>
+              <div className={`message ${msg.role}`}>
+                {msg.content.split('\n').map((line, i) => (
+                  <React.Fragment key={i}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
+              </div>
             </div>
           ))}
           <div ref={messagesEndRef} /> {/* 메시지 끝에 ref 추가 */}
