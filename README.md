@@ -1,70 +1,14 @@
-# Getting Started with Create React App
+## Description
+### 2024 K-Software Empowerment BootCamp
+#### Team AZA
+본 프로젝트는 해외 직구 시 한국 소비자들이 겪는 의류 사이즈 문제를 해결하기 위해, 한국인의 3D 신체 데이터를 기반으로 맞춤형 의류 사이즈를 추천하는 AI 서비스입니다. <br>
+웹 서비스는 React와 FastAPI를 사용하여 사용자 친화적이고 효율적인 시스템을 구현했으며, 무신사 후기를 반영한 커스텀 로직으로 추천 정확도를 높였습니다. <br>
+향후 서비스 확장과 기능 추가도 계획하고 있습니다. <br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Flow Chart
+![flowchart](https://github.com/user-attachments/assets/e78d07a1-cddb-4816-88bb-55100ae55fba) <br> 
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Deploy
+| 간단 진단 & 정밀 진단 서비스 | 신체 치수 예측 AI & 사이즈 추천 AI | 의류 데이터 관련 챗봇 |
+|:---:|:---:|:--:|
+|  ![aza1](https://github.com/user-attachments/assets/68033eb3-6097-433d-8b2a-cc980072b546) |![aza2](https://github.com/user-attachments/assets/5eeb7789-76a3-4386-83d3-244a3fce4bce) | ![KakaoTalk_Photo_2024-09-03-19-01-51](https://github.com/user-attachments/assets/34c444fb-7bc8-44d1-9ce9-8d67e779bebc) |
