@@ -9,6 +9,8 @@
 ![flowchart](https://github.com/user-attachments/assets/e78d07a1-cddb-4816-88bb-55100ae55fba) <br> 
 
 ## Deploy
+❗️이미지 깜빡거림 현상은 gif 변환 과정에서 발생하였습니다. <br>
+❗️실제 배포시 보이지 않습니다. 
 | 간단 진단 & 정밀 진단 서비스 | 신체 치수 예측 AI & 사이즈 추천 AI | 의류 데이터 관련 챗봇 |
 |:---:|:---:|:--:|
 |  ![aza1](https://github.com/user-attachments/assets/68033eb3-6097-433d-8b2a-cc980072b546) |![aza2](https://github.com/user-attachments/assets/5eeb7789-76a3-4386-83d3-244a3fce4bce) | ![KakaoTalk_Photo_2024-09-03-19-01-51](https://github.com/user-attachments/assets/34c444fb-7bc8-44d1-9ce9-8d67e779bebc) |
